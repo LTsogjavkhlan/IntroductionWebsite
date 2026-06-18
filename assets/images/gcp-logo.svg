@@ -1,0 +1,7 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="80" rx="10" fill="#4285F4"/>
+  <text x="40" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Google</text>
+  <text x="40" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Cloud</text>
+  <text x="40" y="55" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8">Professional</text>
+  <text x="40" y="68" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8">Developer</text>
+</svg> 

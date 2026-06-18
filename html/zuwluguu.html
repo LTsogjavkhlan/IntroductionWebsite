@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuwluguu - Mentorship & Advice</title>
+    <!-- Local fonts instead of Google CDN -->
+    <link rel="stylesheet" href="../css/local-fonts.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/zuwluguu.css">
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+
+<body>
+    <!-- Top Menu -->
+    <header class="main-menu" role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <!-- Services Navigation -->
+            <div class="nav-links nav-links-left">
+                <a href="../html/surgalt.html" class="button js-button" aria-label="Go to Surgalt page">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Surgalt</span>
+                        <span class="button__hover js-button__hover">Surgalt</span>
+                    </span>
+                </a>
+                <a href="../html/zuwluguu.html" class="button js-button active-section" aria-current="page"
+                    aria-label="Zuwluguu page - currently viewing"
+                    style="background-color: #aaaaaa; transform: scale(1); color: #555555; opacity: 0.8; cursor: default;">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text" style="color: #555555;">Zuwluguu</span>
+                        <span class="button__hover js-button__hover" style="display: none;">Zuwluguu</span>
+                    </span>
+                </a>
+                <a href="../html/TD.html" class="button js-button" aria-label="Go to TD page">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">TD</span>
+                        <span class="button__hover js-button__hover">TD</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="../index.html" class="logo-link" aria-label="Go to homepage">
+                    <img src="../assets/images/logo.jpg" alt="StepUp Logo" class="logo-image">
+                </a>
+            </div>
+
+            <!-- Main Navigation -->
+            <div class="nav-links nav-links-right">
+                <a href="../index.html#contact" class="button js-button" aria-label="Go to Contact section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Contact</span>
+                        <span class="button__hover js-button__hover">Contact</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Container -->
+            <div class="mobile-nav-links" style="display: none;">
+                <!-- Home Link -->
+                <a href="../index.html" class="button js-button" aria-label="Go to homepage">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Home</span>
+                        <span class="button__hover js-button__hover">Home</span>
+                    </span>
+                </a>
+
+                <!-- Page Links -->
+                <a href="../html/surgalt.html" class="button js-button" aria-label="Go to Surgalt page">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Surgalt</span>
+                        <span class="button__hover js-button__hover">Surgalt</span>
+                    </span>
+                </a>
+                <a href="../html/zuwluguu.html" class="button js-button active-section" aria-current="page"
+                    aria-label="Zuwluguu page - currently viewing">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Zuwluguu</span>
+                        <span class="button__hover js-button__hover">Zuwluguu</span>
+                    </span>
+                </a>
+                <a href="../html/TD.html" class="button js-button" aria-label="Go to TD page">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">TD</span>
+                        <span class="button__hover js-button__hover">TD</span>
+                    </span>
+                </a>
+
+                <!-- Divider -->
+                <div class="mobile-nav-divider"></div>
+
+                <!-- Contact Link -->
+                <a href="../index.html#contact" class="button js-button" aria-label="Go to Contact section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Contact</span>
+                        <span class="button__hover js-button__hover">Contact</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger-menu" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Guidance for Your Journey</h1>
+            <p class="hero-subtitle">Expert advice and mentorship to help you grow</p>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </div>
+        <div class="waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                    </path>
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(115,0,255,0.7)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(115,0,255,0.5)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(115,0,255,0.3)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#220442"></use>
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Advice Cards Section -->
+    <section class="advice-section">
+        <div class="section-header">
+            <h2 class="section-title">Expert Advice</h2>
+            <p class="section-description">Practical guidance from industry professionals</p>
+        </div>
+
+        <div class="advice-cards">
+            <!-- Card 1 -->
+            <div class="advice-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="card-title">ISO</h3>
+                <p class="card-content">Strategies to advance your career and achieve professional growth.</p>
+                <a href="#" class="card-link" data-study="career-study">View Case Studies →</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="advice-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V8z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="card-title">Skill Building</h3>
+                <p class="card-content">Essential skills for success in today's competitive environment.</p>
+                <a href="#" class="card-link" data-study="skill-study">View Research →</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="advice-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="card-title">Networking</h3>
+                <p class="card-content">Build meaningful professional relationships that last.</p>
+                <a href="#" class="card-link" data-study="network-study">View Success Stories →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentorship Section -->
+    <section class="mentorship-section">
+        <div class="mentorship-content">
+            <div class="mentorship-text">
+                <h2 class="section-title">Personalized Mentorship</h2>
+                <p class="section-description">Connect with experienced mentors who can guide you through your specific
+                    challenges and goals.</p>
+                <ul class="mentorship-benefits">
+                    <li>One-on-one sessions tailored to your needs</li>
+                    <li>Accountability and progress tracking</li>
+                    <li>Access to exclusive resources</li>
+                    <li>Long-term career guidance</li>
+                </ul>
+                <a href="#" class="cta-button" id="mentor-cta">Find Your Mentor</a>
+            </div>
+            <div class="mentorship-image">
+                <div class="image-placeholder"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studies Modal -->
+    <div class="modal-overlay" id="study-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title" id="modal-study-title">Case Study</h3>
+            <div class="modal-body" id="modal-study-content">
+                <!-- Content will be loaded here dynamically -->
+            </div>
+            <a href="#" class="modal-link" id="modal-full-study">View Full Study</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="full-screen section">
+        <h2>Холбоо барих</h2>
+        <p class="contact-tagline">Want to chat? Pick your poison.</p>
+        <div class="contact-grid">
+            <!-- Left Side - Contact Cards -->
+            <div class="contact-cards-container">
+                <a href="mailto:email@example.com" class="contact-card small-card" data-card="1">
+                    <div class="contact-card-inner">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <div class="contact-info">
+                            <span class="contact-link">email@example.com</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="contact-card small-card" data-card="2" data-phone="+123 456 7890">
+                    <div class="contact-card-inner">
+                        <div class="contact-icon">📱</div>
+                        <h3>Phone</h3>
+                        <div class="contact-info">
+                            <span class="contact-link">+123 456 7890</span>
+                        </div>
+                        <span class="copy-indicator">Click to copy</span>
+                    </div>
+                </div>
+
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="contact-card small-card"
+                    data-card="3">
+                    <div class="contact-card-inner">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <div class="contact-info">
+                            <span class="contact-link">linkedin.com/in/your-profile</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/your-username" target="_blank" class="contact-card small-card"
+                    data-card="4">
+                    <div class="contact-card-inner">
+                        <div class="contact-icon">💻</div>
+                        <h3>GitHub</h3>
+                        <div class="contact-info">
+                            <span class="contact-link">github.com/your-username</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Right Side - email form -->
+            <div class="contact-form-container">
+                <h3>Send Me a Message</h3>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject of your message">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                    </div>
+                    <!-- Button -->
+                    <div class="button-wrap">
+                        <button type="submit">
+                            <span>Send Message</span>
+                        </button>
+                        <div class="button-shadow"></div>
+                    </div>
+
+                    <!-- Background -->
+                    <svg style="position: absolute; width: 100%; height: 100%; z-index: 0;" width="100%" height="100%"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="dottedGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+                                <circle cx="2" cy="2" r="1" fill="rgba(115,0,255,0.15)" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#dottedGrid)" />
+                    </svg>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local GSAP Scripts -->
+    <script src="../js/vendor/gsap.min.js"></script>
+    <script src="../js/vendor/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="../js/shared.js"></script>
+    <script src="../js/zuwluguu.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const loadingElement = document.querySelector('.loading');
+            if (loadingElement) {
+                loadingElement.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- EmailJS Configuration -->
+    <script src="../js/emailjs-config.js"></script>
+</body>
+
+</html>

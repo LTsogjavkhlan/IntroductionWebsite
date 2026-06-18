@@ -1,0 +1,263 @@
+/* Fix for footer display issues */
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    position: relative;
+}
+
+/* Ensure footer is always at the bottom */
+html,
+body {
+    min-height: 100%;
+}
+
+/* Contact Footer Styles */
+.contact-footer {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 3rem 1rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 5;
+    clear: both;
+    margin-top: 0 !important;
+    /* Ensure no gap */
+}
+
+.contact-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-footer h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-footer-tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.contact-footer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-footer-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
+    transform: translateZ(0);
+    /* Hardware acceleration */
+    margin-bottom: 20px;
+    min-height: 180px;
+    box-sizing: border-box;
+    opacity: 1 !important;
+    /* Force visibility */
+    visibility: visible !important;
+    /* Force visibility */
+    transform: translateY(0) translateZ(0) !important;
+    /* Force correct position */
+}
+
+/* Remove the default hidden state */
+/* .contact-footer-card {
+    opacity: 0;
+    transform: translateY(20px) translateZ(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+} */
+
+.contact-footer-card.card-visible {
+    opacity: 1 !important;
+    transform: translateY(0) translateZ(0) !important;
+    visibility: visible !important;
+}
+
+.contact-footer-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-footer-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-footer-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.contact-footer-info {
+    opacity: 0.9;
+    text-align: center;
+}
+
+.contact-footer-link {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    word-break: break-all;
+}
+
+.contact-footer-description {
+    display: block;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-footer-social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.15s ease;
+    /* Faster transition */
+    color: white;
+    text-decoration: none;
+    will-change: transform, background-color;
+    transform: translateZ(0);
+    /* Hardware acceleration */
+}
+
+.social-icon:hover {
+    background: white;
+    color: #1a1a2e;
+    transform: translateY(-5px);
+}
+
+.social-icon.icon-hover {
+    background: white;
+    color: #1a1a2e;
+    transform: translateY(-5px);
+}
+
+.copyright {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Add tooltip styles */
+.copy-tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 1;
+    transition: opacity 0.5s;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.copy-tooltip:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px 5px 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent;
+}
+
+.copy-tooltip.fade-out {
+    opacity: 0;
+}
+
+/* Add cursor pointer to phone card */
+.contact-footer-card:not(a) {
+    cursor: pointer;
+}
+
+.contact-footer-card:not(a):hover:after {
+    content: 'Click to copy';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-footer-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-footer-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-footer h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Fix for half-cut card issue */
+@media (max-width: 992px) {
+    .contact-footer-grid {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-footer-card {
+        width: 100%;
+        max-width: 250px;
+    }
+}

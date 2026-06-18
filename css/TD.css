@@ -1,0 +1,1367 @@
+/* Reset body padding */
+body {
+    padding-top: 0 !important;
+}
+
+/* Skip Navigation Link */
+.skip-nav {
+    position: absolute;
+    top: -40px;
+    left: 8px;
+    background: #000;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 9999;
+    transition: top 0.3s;
+}
+
+.skip-nav:focus {
+    top: 8px;
+}
+
+/* Main content container */
+.main-content {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Gallery background wrapper */
+.gallery-background-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(15, 12, 41, 0.95);
+    z-index: 1;
+}
+
+/* Animated floating lights */
+.gallery-background-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle 100px at 15% 25%, rgba(115, 0, 255, 0.06) 0%, transparent 60%),
+        radial-gradient(circle 80px at 85% 75%, rgba(183, 0, 255, 0.05) 0%, transparent 60%),
+        radial-gradient(circle 60px at 50% 10%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 2;
+    animation: tdFloatingLights 20s ease-in-out infinite;
+}
+
+/* Floating lights animation */
+@keyframes tdFloatingLights {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.6;
+    }
+
+    33% {
+        transform: translate(20px, -30px) scale(1.2);
+        opacity: 0.8;
+    }
+
+    66% {
+        transform: translate(-15px, 25px) scale(0.9);
+        opacity: 1;
+    }
+}
+
+/* Background image blur effect */
+.gallery-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    opacity: 0.3;
+    transition: background-image 0.5s ease-in-out;
+    z-index: 1;
+}
+
+/* Gallery container */
+.gallery {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    overflow: hidden;
+    z-index: 2;
+    padding: 0;
+}
+
+/* Glass texture overlay */
+.gallery::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.015) 0%, transparent 50%),
+        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.005) 50%, transparent 100%);
+    background-size: 600px 600px, 400px 400px, 100% 2px;
+    background-position: 0 0, 100% 100%, 0 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: galleryFloat 15s ease-in-out infinite;
+}
+
+/* Gallery float animation */
+@keyframes galleryFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(0.5deg);
+    }
+}
+
+/* Product cards container */
+.cards {
+    position: relative;
+    width: 24rem;
+    height: 26rem;
+    margin: 4rem auto 0;
+    list-style: none;
+    perspective: 1000px;
+}
+
+/* Individual product cards */
+.cards li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 24px;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform, opacity, visibility;
+    transform: translateZ(0);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+}
+
+/* Glass shine effect on hover */
+.cards li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(115, 0, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: 24px;
+    z-index: 1;
+}
+
+.cards li:hover::before {
+    opacity: 1;
+}
+
+/* Active card styling */
+.cards li.active {
+    z-index: 3;
+    box-shadow:
+        0 35px 80px rgba(0, 0, 0, 0.25),
+        0 15px 40px rgba(115, 0, 255, 0.2),
+        0 5px 15px rgba(115, 0, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 0 0 1px rgba(115, 0, 255, 0.3);
+    border-color: rgba(115, 0, 255, 0.3);
+}
+
+.product-image {
+    width: 100%;
+    height: 60%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateZ(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Image gallery hover overlay */
+.product-image .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+    border-radius: 18px;
+}
+
+.product-image:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Gallery icon */
+.gallery-overlay .gallery-icon {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+/* Gallery text */
+.gallery-overlay .gallery-text {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Icon pulse animation */
+@keyframes pulseIcon {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.product-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.product-image:hover::before {
+    opacity: 1;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease;
+}
+
+.product-image:hover {
+    transform: translateZ(20px) scale(1.02);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2),
+        0 5px 15px rgba(115, 0, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(115, 0, 255, 0.2);
+}
+
+.product-image:hover img {
+    transform: scale(1.05);
+}
+
+.product-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, #ffffff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #b347ff 0%, #7300ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0.4rem 0;
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 0 25px rgba(179, 71, 255, 0.4);
+}
+
+.product-description {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+}
+
+/* CSS Custom Properties for Glass Buttons */
+:root {
+    --angle-1: -75deg;
+    --angle-2: -45deg;
+}
+
+/* Navigation buttons container */
+.actions {
+    position: relative;
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 10;
+    --anim--hover-time: 400ms;
+    --anim--hover-ease: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ========== GLASS BUTTON DESIGN ========== */
+
+/* Button Wrap Container */
+.actions .button-wrap {
+    position: relative;
+    z-index: 2;
+    border-radius: 999vw;
+    background: transparent;
+    pointer-events: none;
+    transition: all var(--anim--hover-time) var(--anim--hover-ease);
+}
+
+/* Button Shadow Container */
+.actions .button-shadow {
+    --shadow-cuttoff-fix: 1.5em;
+    position: absolute;
+    width: calc(100% + var(--shadow-cuttoff-fix));
+    height: calc(100% + var(--shadow-cuttoff-fix));
+    top: calc(0% - var(--shadow-cuttoff-fix) / 2);
+    left: calc(0% - var(--shadow-cuttoff-fix) / 2);
+    filter: blur(clamp(2px, 0.125em, 12px));
+    -webkit-filter: blur(clamp(2px, 0.125em, 12px));
+    -moz-filter: blur(clamp(2px, 0.125em, 12px));
+    -ms-filter: blur(clamp(2px, 0.125em, 12px));
+    overflow: visible;
+    pointer-events: none;
+}
+
+/* Shadow */
+.actions .button-shadow::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    border-radius: 999vw;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15));
+    width: calc(100% - var(--shadow-cuttoff-fix) - 0.25em);
+    height: calc(100% - var(--shadow-cuttoff-fix) - 0.25em);
+    top: calc(var(--shadow-cuttoff-fix) / 2);
+    left: calc(var(--shadow-cuttoff-fix) / 2);
+    padding: 0.125em;
+    box-sizing: border-box;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    transition: all var(--anim--hover-time) var(--anim--hover-ease);
+    overflow: visible;
+    opacity: 1;
+}
+
+/* ========== BUTTON BASE STYLES ========== */
+
+.actions button {
+    /* Basic Styling */
+    --border-width: clamp(1px, 0.0625em, 4px);
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    pointer-events: auto;
+    z-index: 3;
+    background: linear-gradient(-75deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.08));
+    border-radius: 999vw;
+    box-shadow: inset 0 0.125em 0.125em rgba(0, 0, 0, 0.05),
+        inset 0 -0.125em 0.125em rgba(255, 255, 255, 0.5),
+        0 0.25em 0.125em -0.125em rgba(0, 0, 0, 0.2),
+        0 0 0.1em 0.25em inset rgba(255, 255, 255, 0.2),
+        0 0 0 0 rgba(255, 255, 255, 1);
+    backdrop-filter: blur(clamp(1px, 0.125em, 4px));
+    -webkit-backdrop-filter: blur(clamp(1px, 0.125em, 4px));
+    -moz-backdrop-filter: blur(clamp(1px, 0.125em, 4px));
+    -ms-backdrop-filter: blur(clamp(1px, 0.125em, 4px));
+    transition: all var(--anim--hover-time) var(--anim--hover-ease);
+}
+
+.actions button:hover {
+    transform: scale(0.975);
+    backdrop-filter: blur(0.01em);
+    -webkit-backdrop-filter: blur(0.01em);
+    -moz-backdrop-filter: blur(0.01em);
+    -ms-backdrop-filter: blur(0.01em);
+    box-shadow: inset 0 0.125em 0.125em rgba(0, 0, 0, 0.05),
+        inset 0 -0.125em 0.125em rgba(255, 255, 255, 0.5),
+        0 0.15em 0.05em -0.1em rgba(0, 0, 0, 0.25),
+        0 0 0.05em 0.1em inset rgba(255, 255, 255, 0.5),
+        0 0 0 0 rgba(255, 255, 255, 1);
+}
+
+/* Button Text */
+.actions button span {
+    position: relative;
+    display: block;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-family: inherit;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0em 0.25em 0.05em rgba(0, 0, 0, 0.1);
+    transition: all var(--anim--hover-time) var(--anim--hover-ease);
+    padding-inline: 1.5em;
+    padding-block: 0.875em;
+    min-width: 120px;
+    text-align: center;
+}
+
+.actions button:hover span {
+    text-shadow: 0.025em 0.025em 0.025em rgba(0, 0, 0, 0.12);
+}
+
+/* Text Shine Effect */
+.actions button span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: calc(100% - var(--border-width));
+    height: calc(100% - var(--border-width));
+    top: calc(0% + var(--border-width) / 2);
+    left: calc(0% + var(--border-width) / 2);
+    box-sizing: border-box;
+    border-radius: 999vw;
+    overflow: clip;
+    background: linear-gradient(var(--angle-2),
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.5) 40% 50%,
+            rgba(255, 255, 255, 0) 55%);
+    z-index: 3;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    transition: background-position calc(var(--anim--hover-time) * 1.25) var(--anim--hover-ease),
+        --angle-2 calc(var(--anim--hover-time) * 1.25) var(--anim--hover-ease);
+}
+
+.actions button:hover span::after {
+    background-position: 25% 50%;
+}
+
+.actions button:active span::after {
+    background-position: 50% 15%;
+    --angle-2: -15deg;
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+
+    .actions button span::after,
+    .actions button:active span::after {
+        --angle-2: -45deg;
+    }
+}
+
+/* ========== BUTTON OUTLINE ========== */
+
+/* Outline */
+.actions button::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    border-radius: 999vw;
+    width: calc(100% + var(--border-width));
+    height: calc(100% + var(--border-width));
+    top: calc(0% - var(--border-width) / 2);
+    left: calc(0% - var(--border-width) / 2);
+    padding: var(--border-width);
+    box-sizing: border-box;
+    background: conic-gradient(from var(--angle-1) at 50% 50%,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0) 5% 40%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 60% 95%,
+            rgba(255, 255, 255, 0.4)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    transition: all var(--anim--hover-time) var(--anim--hover-ease),
+        --angle-1 500ms ease;
+    box-shadow: inset 0 0 0 calc(var(--border-width) / 2) rgba(255, 255, 255, 0.5);
+}
+
+.actions button:hover::after {
+    --angle-1: -125deg;
+}
+
+.actions button:active::after {
+    --angle-1: -75deg;
+}
+
+@media (hover: none) and (pointer: coarse) {
+
+    .actions button::after,
+    .actions button:hover::after,
+    .actions button:active::after {
+        --angle-1: -75deg;
+    }
+}
+
+/* Shadow Hover */
+.actions .button-wrap:has(button:hover) .button-shadow {
+    filter: blur(clamp(2px, 0.0625em, 6px));
+    -webkit-filter: blur(clamp(2px, 0.0625em, 6px));
+    -moz-filter: blur(clamp(2px, 0.0625em, 6px));
+    -ms-filter: blur(clamp(2px, 0.0625em, 6px));
+    transition: filter var(--anim--hover-time) var(--anim--hover-ease);
+}
+
+.actions .button-wrap:has(button:hover) .button-shadow::after {
+    top: calc(var(--shadow-cuttoff-fix) / 2 + 0.1em);
+    opacity: 1;
+}
+
+/* Rotation */
+.actions .button-wrap:has(button:active) {
+    transform: rotate3d(1, 0, 0, 25deg);
+}
+
+.actions .button-wrap:has(button:active) button {
+    box-shadow: inset 0 0.125em 0.125em rgba(0, 0, 0, 0.05),
+        inset 0 -0.125em 0.125em rgba(255, 255, 255, 0.5),
+        0 0.125em 0.125em -0.125em rgba(0, 0, 0, 0.2),
+        0 0 0.1em 0.25em inset rgba(255, 255, 255, 0.2),
+        0 0.225em 0.05em 0 rgba(0, 0, 0, 0.05),
+        0 0.25em 0 0 rgba(255, 255, 255, 0.75),
+        inset 0 0.25em 0.05em 0 rgba(0, 0, 0, 0.15);
+}
+
+.actions .button-wrap:has(button:active) .button-shadow {
+    filter: blur(clamp(2px, 0.125em, 12px));
+    -webkit-filter: blur(clamp(2px, 0.125em, 12px));
+    -moz-filter: blur(clamp(2px, 0.125em, 12px));
+    -ms-filter: blur(clamp(2px, 0.125em, 12px));
+}
+
+.actions .button-wrap:has(button:active) .button-shadow::after {
+    top: calc(var(--shadow-cuttoff-fix) / 2 + 0.05em);
+    opacity: 0.75;
+}
+
+.actions .button-wrap:has(button:active) span {
+    text-shadow: 0.025em 0.25em 0.05em rgba(0, 0, 0, 0.12);
+}
+
+/* Dot indicators */
+.dot-indicators {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 1.2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+}
+
+.dot:hover::before {
+    opacity: 1;
+}
+
+.dot:hover {
+    transform: scale(1.15);
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.15),
+        0 0 15px rgba(115, 0, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-color: rgba(115, 0, 255, 0.4);
+}
+
+/* Active dot - Capsule shape with shine effect */
+.dot.active {
+    width: 32px;
+    height: 12px;
+    border-radius: 999px;
+    background: linear-gradient(-75deg,
+            rgba(115, 0, 255, 0.8) 0%,
+            rgba(183, 0, 255, 0.9) 30%,
+            rgba(115, 0, 255, 0.8) 100%);
+    border: 1px solid rgba(179, 71, 255, 0.6);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(179, 71, 255, 0.4),
+        0 0 40px rgba(179, 71, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    animation: dotShine 2s ease-in-out infinite;
+}
+
+/* Shine effect for active dot */
+.dot.active::before {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.6) 40%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0.6) 60%,
+            rgba(255, 255, 255, 0) 100%);
+    opacity: 1;
+    border-radius: 999px;
+    animation: shineMove 2s ease-in-out infinite;
+    mix-blend-mode: screen;
+}
+
+/* Shine animation */
+@keyframes shineMove {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Dot glow animation */
+@keyframes dotShine {
+
+    0%,
+    100% {
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.2),
+            0 0 20px rgba(179, 71, 255, 0.4),
+            0 0 40px rgba(179, 71, 255, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.4),
+            inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.2),
+            0 0 30px rgba(179, 71, 255, 0.6),
+            0 0 60px rgba(179, 71, 255, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.5),
+            inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+
+/* List Section Styles - Product Grid Layout */
+.list-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* Add background for list section */
+    background: rgba(15, 12, 41, 0.95);
+}
+
+/* Add glass texture overlay effect for list section - replicated from gallery */
+.list-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.025) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(115, 0, 255, 0.02) 0%, transparent 40%),
+        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.008) 50%, transparent 100%),
+        linear-gradient(45deg, transparent 0%, rgba(115, 0, 255, 0.005) 50%, transparent 100%);
+    background-size: 600px 600px, 400px 400px, 500px 500px, 100% 2px, 100% 3px;
+    background-position: 0 0, 100% 100%, 50% 50%, 0 50%, 0 25%;
+    pointer-events: none;
+    z-index: 0;
+    animation: galleryFloat 15s ease-in-out infinite;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0 2rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* Product Card Styles for List Section */
+.list-section .product-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.2),
+        0 5px 15px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    height: auto;
+    min-height: 320px;
+    will-change: transform, box-shadow;
+    z-index: 5;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.list-section .product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.25),
+        0 10px 25px rgba(115, 0, 255, 0.15),
+        0 5px 15px rgba(115, 0, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(115, 0, 255, 0.2);
+    z-index: 10;
+}
+
+/* Product Image */
+.list-section .product-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.list-section .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: none;
+}
+
+/* Apply gallery overlay to list section images too */
+.list-section .product-image .gallery-overlay {
+    border-radius: 12px;
+}
+
+/* Removed conflicting hover effect - GSAP handles image scaling */
+.list-section .product-card:hover .product-image img {
+    /* Removed transform: scale(1.05); - GSAP handles this */
+}
+
+/* Product Info */
+.list-section .product-info {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 3;
+}
+
+/* Hide category styles since categories are removed */
+.list-section .product-category {
+    display: none;
+}
+
+.list-section .product-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.list-section .product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgba(115, 0, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+/* Product Description - Always visible and brought to front */
+.list-section .product-description {
+    opacity: 1;
+    max-height: none;
+    overflow: visible;
+    transition: none;
+    transform: translateY(0);
+    position: relative;
+    z-index: 4;
+}
+
+/* Remove hover effect for description since it's always visible */
+.list-section .product-card:hover .product-description {
+    opacity: 1;
+    max-height: none;
+    transform: translateY(0);
+}
+
+.list-section .product-description p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.list-section .product-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.list-section .feature {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.95);
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide product overlay and all button-related styles since they're removed */
+.list-section .product-overlay {
+    display: none;
+}
+
+.list-section .product-actions {
+    display: none;
+}
+
+.list-section .btn-primary,
+.list-section .btn-secondary {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .list-section {
+        padding: 2rem 1rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .list-section .product-card {
+        min-height: 280px;
+    }
+
+    .list-section .product-card:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+
+    .list-section .product-image {
+        height: 160px;
+    }
+
+    .list-section .product-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .list-section .btn-primary,
+    .list-section .btn-secondary {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .list-section {
+        padding: 1rem 0.5rem;
+    }
+
+    .products-grid {
+        gap: 1rem;
+    }
+
+    .list-section .product-card {
+        min-height: 260px;
+    }
+
+    .list-section .product-card:hover {
+        transform: translateY(-3px) scale(1.01);
+    }
+
+    .list-section .product-info {
+        padding: 1.2rem;
+    }
+
+    .list-section .product-overlay {
+        padding: 1rem;
+    }
+}
+
+/* Loading indicator */
+.loading-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #7300ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1000;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Image Gallery Modal */
+
+/* Gallery Modal Overlay */
+.gallery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Main Gallery Container */
+.gallery-container {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    max-width: 1200px;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.3),
+        0 10px 30px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transform: scale(0.8) translateY(50px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-modal.active .gallery-container {
+    transform: scale(1) translateY(0);
+}
+
+/* Gallery Header */
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1.2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.gallery-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Image Display */
+.gallery-main {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.main-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Navigation Arrows */
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
+.gallery-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-prev {
+    left: 1rem;
+}
+
+.gallery-next {
+    right: 1rem;
+}
+
+/* Thumbnails Strip */
+.gallery-thumbnails {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.gallery-thumbnails::-webkit-scrollbar {
+    height: 4px;
+}
+
+.gallery-thumbnails::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+.gallery-thumbnails::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+.thumbnail {
+    flex-shrink: 0;
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.thumbnail.active {
+    border-color: rgba(115, 0, 255, 0.8);
+    box-shadow: 0 0 15px rgba(115, 0, 255, 0.4);
+}
+
+.thumbnail.active img {
+    transform: scale(1.1);
+}
+
+/* Image Counter */
+.image-counter {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .gallery-container {
+        width: 95%;
+        height: 95%;
+        margin: 0;
+    }
+
+    .gallery-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .gallery-title {
+        font-size: 1rem;
+    }
+
+    .gallery-main {
+        padding: 1rem;
+    }
+
+    .gallery-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .gallery-prev {
+        left: 0.5rem;
+    }
+
+    .gallery-next {
+        right: 0.5rem;
+    }
+
+    .gallery-thumbnails {
+        padding: 1rem 1.5rem;
+        gap: 0.5rem;
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 45px;
+    }
+
+    .image-counter {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        border-radius: 12px;
+    }
+
+    .gallery-header {
+        padding: 0.8rem 1rem;
+    }
+
+    .gallery-main {
+        padding: 0.5rem;
+    }
+
+    .gallery-thumbnails {
+        padding: 0.8rem 1rem;
+    }
+}

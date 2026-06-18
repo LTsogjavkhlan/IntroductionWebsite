@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- SEO Meta Tags -->
+    <title>StepUp Digital - Professional Web Development, Training & Digital Transformation Services</title>
+    <meta name="description"
+        content="Expert digital solutions including professional web development, comprehensive training programs, strategic mentoring, and complete digital transformation services. 8+ years of experience helping businesses and individuals succeed in the digital age.">
+    <meta name="keywords"
+        content="web development, digital transformation, professional training, mentoring services, coaching programs, digital solutions, web design, full-stack development, career advancement, skill development">
+    <meta name="author" content="StepUp Digital">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="StepUp Digital - Professional Digital Services & Training">
+    <meta property="og:description"
+        content="Transform your digital journey with expert web development, comprehensive training programs, and strategic mentoring. 8+ years of experience, 100+ successful projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com/">
+    <meta property="og:image" content="assets/images/hero1.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="StepUp Digital">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="StepUp Digital - Professional Digital Services">
+    <meta name="twitter:description"
+        content="Expert web development, training programs, and digital transformation services">
+    <meta name="twitter:image" content="assets/images/hero1.jpg">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/images/hero1.jpg" as="image">
+    <link rel="preload" href="js/vendor/gsap.min.js" as="script">
+    <link rel="preload" href="css/local-fonts.css" as="style">
+    <link rel="preload" href="assets/fonts/montserrat-v25-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/poppins-v20-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/local-fonts.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="src/style.css">
+
+    <!-- Progressive Enhancement -->
+    <script>document.documentElement.classList.remove('no-js');</script>
+
+    <!-- JavaScript Libraries -->
+    <script src="js/vendor/gsap.min.js"></script>
+    <script src="js/vendor/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/emailjs-config.js"></script>
+</head>
+
+<body>
+    <!-- Loading Indicator -->
+    <div class="loading" aria-hidden="true"></div>
+
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <header class="main-menu" role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <!-- Services Navigation -->
+            <div class="nav-links nav-links-left">
+                <a href="html/surgalt.html" class="button js-button" aria-label="Go to Surgalt training programs">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Surgalt</span>
+                        <span class="button__hover js-button__hover">Surgalt</span>
+                    </span>
+                </a>
+                <a href="html/zuwluguu.html" class="button js-button" aria-label="Go to Zuwluguu mentoring services">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Zuwluguu</span>
+                        <span class="button__hover js-button__hover">Zuwluguu</span>
+                    </span>
+                </a>
+                <a href="html/TD.html" class="button js-button" aria-label="Go to TD digital transformation">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">TD</span>
+                        <span class="button__hover js-button__hover">TD</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="index.html" class="logo-link" aria-label="StepUp Digital - Go to homepage">
+                    <img src="assets/images/logo.jpg" alt="StepUp Digital Logo" class="logo-image">
+                </a>
+            </div>
+
+            <!-- Main Navigation -->
+            <div class="nav-links nav-links-right">
+                <a href="#about" class="button js-button" aria-label="Go to About section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">About</span>
+                        <span class="button__hover js-button__hover">About</span>
+                    </span>
+                </a>
+                <a href="#services" class="button js-button" aria-label="Go to Services section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Services</span>
+                        <span class="button__hover js-button__hover">Services</span>
+                    </span>
+                </a>
+                <a href="#contact" class="button js-button" aria-label="Go to Contact section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Contact</span>
+                        <span class="button__hover js-button__hover">Contact</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Container (combines all navigation links) -->
+            <div class="mobile-nav-links" style="display: none;">
+                <!-- Page Links (appear first in mobile menu) -->
+                <a href="html/surgalt.html" class="button js-button" aria-label="Go to Surgalt training programs">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Surgalt</span>
+                        <span class="button__hover js-button__hover">Surgalt</span>
+                    </span>
+                </a>
+                <a href="html/zuwluguu.html" class="button js-button" aria-label="Go to Zuwluguu mentoring services">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Zuwluguu</span>
+                        <span class="button__hover js-button__hover">Zuwluguu</span>
+                    </span>
+                </a>
+                <a href="html/TD.html" class="button js-button" aria-label="Go to TD digital transformation">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">TD</span>
+                        <span class="button__hover js-button__hover">TD</span>
+                    </span>
+                </a>
+
+                <!-- Divider -->
+                <div class="mobile-nav-divider"></div>
+
+                <!-- Section Links -->
+                <a href="#about" class="button js-button" aria-label="Go to About section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">About</span>
+                        <span class="button__hover js-button__hover">About</span>
+                    </span>
+                </a>
+                <a href="#services" class="button js-button" aria-label="Go to Services section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Services</span>
+                        <span class="button__hover js-button__hover">Services</span>
+                    </span>
+                </a>
+                <a href="#contact" class="button js-button" aria-label="Go to Contact section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Contact</span>
+                        <span class="button__hover js-button__hover">Contact</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger-menu" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- Hero Section -->
+            <section id="hero" class="hero-slider full-screen section" role="banner" aria-labelledby="hero-title">
+                <div class="slider-container" role="region" aria-label="Hero image carousel" aria-live="polite">
+                    <div class="slide active" data-index="0" role="group" aria-label="Digital Innovation slide">
+                        <div class="slide-content">
+                            <h1 id="hero-title">Welcome to Digital Innovation</h1>
+                            <p>Transforming ideas into digital reality with cutting-edge technology and expert guidance
+                            </p>
+                            <div class="hero-cta">
+                                <div class="button-wrap">
+                                    <button onclick="window.location.href='#services'" type="button"
+                                        aria-describedby="hero-title">
+                                        <span>Explore Services</span>
+                                    </button>
+                                    <div class="button-shadow" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-bg">
+                            <img src="assets/images/cow-7200409 copy.jpg" data-src="assets/images/cow-7200409 copy.jpg"
+                                alt="Modern digital workspace showing innovative technology solutions"
+                                class="lazy-load slide-bg-img" loading="eager">
+                        </div>
+                    </div>
+
+                    <div class="slide" data-index="1" role="group" aria-label="Professional Training slide">
+                        <div class="slide-content">
+                            <h1>Professional Training Programs</h1>
+                            <p>Expert-led courses in web development, data science, and emerging technologies</p>
+                            <div class="hero-cta">
+                                <div class="button-wrap">
+                                    <button onclick="window.location.href='html/surgalt.html'" type="button"
+                                        aria-label="View training courses">
+                                        <span>View Courses</span>
+                                    </button>
+                                    <div class="button-shadow" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-bg">
+                            <img src="assets/images/hero1.jpg" data-src="assets/images/hero1.jpg"
+                                alt="Professional training session with students learning modern technology skills"
+                                class="lazy-load slide-bg-img" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="slide" data-index="2" role="group" aria-label="Digital Transformation slide">
+                        <div class="slide-content">
+                            <h1>Digital Transformation Services</h1>
+                            <p>Modernize your business operations with cutting-edge technology solutions and strategic
+                                guidance</p>
+                            <div class="hero-cta">
+                                <div class="button-wrap">
+                                    <button onclick="window.location.href='html/TD.html'" type="button"
+                                        aria-label="Learn about digital transformation">
+                                        <span>Learn More</span>
+                                    </button>
+                                    <div class="button-shadow" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-bg">
+                            <img src="assets/images/hero2.jpg" data-src="assets/images/hero2.jpg"
+                                alt="Digital transformation dashboard showing modern business analytics and cloud solutions"
+                                class="lazy-load slide-bg-img" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="slide" data-index="3" role="group" aria-label="Mentorship & Coaching slide">
+                        <div class="slide-content">
+                            <h1>Expert Mentorship & Coaching</h1>
+                            <p>Personalized guidance and career coaching to accelerate your professional development</p>
+                            <div class="hero-cta">
+                                <div class="button-wrap">
+                                    <button onclick="window.location.href='html/zuwluguu.html'" type="button"
+                                        aria-label="Start mentorship program">
+                                        <span>Get Started</span>
+                                    </button>
+                                    <div class="button-shadow" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-bg">
+                            <img src="assets/images/hero3.jpg" data-src="assets/images/hero3.jpg"
+                                alt="One-on-one mentoring session with professional coach providing career guidance"
+                                class="lazy-load slide-bg-img" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Slider Navigation -->
+                    <div class="slider-nav-area prev-area">
+                        <div class="nav-blur-bg" aria-hidden="true"></div>
+                        <button class="slider-nav prev" aria-label="Previous slide" type="button">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="slider-nav-area next-area">
+                        <div class="nav-blur-bg" aria-hidden="true"></div>
+                        <button class="slider-nav next" aria-label="Next slide" type="button">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Slide Indicators -->
+                    <div class="slide-indicators" role="group" aria-label="Slide navigation">
+                        <button class="indicator active" data-index="0" aria-label="Go to slide 1: Digital Innovation"
+                            type="button"></button>
+                        <button class="indicator" data-index="1" aria-label="Go to slide 2: Professional Training"
+                            type="button"></button>
+                        <button class="indicator" data-index="2" aria-label="Go to slide 3: Digital Transformation"
+                            type="button"></button>
+                        <button class="indicator" data-index="3" aria-label="Go to slide 4: Mentorship & Coaching"
+                            type="button"></button>
+                    </div>
+                </div>
+
+                <!-- Wave Transition -->
+                <div class="wave-transition" aria-hidden="true">
+                    <div class="wave-container">
+                        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" role="presentation">
+                            <defs>
+                                <path id="gentle-wave"
+                                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(18,113,255,0.6)" />
+                                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(108,0,162,0.7)" />
+                                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,17,82,0.8)" />
+                                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(0,17,82)" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section overlap-wave" aria-labelledby="about-title">
+                <div class="gradient-bg" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                <feColorMatrix in="blur" mode="matrix"
+                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                                <feBlend in="SourceGraphic" in2="goo" />
+                            </filter>
+                        </defs>
+                    </svg>
+                    <div class="gradients-container">
+                        <div class="g1"></div>
+                        <div class="g2"></div>
+                        <div class="g3"></div>
+                        <div class="g4"></div>
+                        <div class="g5"></div>
+                        <div class="interactive"></div>
+                    </div>
+                </div>
+
+                <div class="about-section-2-content">
+                    <h2 id="about-title">About Me</h2>
+
+                    <div class="about-cards-container" role="region" aria-label="Professional background information">
+                        <article class="glass-card" data-card="experience" tabindex="0" role="article"
+                            aria-labelledby="exp-title">
+                            <div class="glass-card-inner">
+                                <div class="card-icon" aria-hidden="true">🚀</div>
+                                <h3 id="exp-title">Experience & Expertise</h3>
+                                <p>With over 8 years in digital transformation, I've helped countless businesses evolve
+                                    their technology stack and operational processes. My expertise spans from full-stack
+                                    development to strategic digital consulting.</p>
+                                <div class="card-highlights">
+                                    <span class="highlight">8+ Years Experience</span>
+                                    <span class="highlight">100+ Projects</span>
+                                    <span class="highlight">50+ Clients</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="glass-card" data-card="philosophy" tabindex="0" role="article"
+                            aria-labelledby="phil-title">
+                            <div class="glass-card-inner">
+                                <div class="card-icon" aria-hidden="true">💡</div>
+                                <h3 id="phil-title">Philosophy & Approach</h3>
+                                <p>I believe in creating technology that serves people, not the other way around. My
+                                    approach combines cutting-edge technical skills with human-centered design thinking
+                                    to deliver solutions that truly make a difference.</p>
+                                <div class="card-highlights">
+                                    <span class="highlight">User-Centered</span>
+                                    <span class="highlight">Innovation-Driven</span>
+                                    <span class="highlight">Results-Focused</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Professional Certifications -->
+                <div class="certificates-section" role="region" aria-labelledby="certs-title">
+                    <h3 id="certs-title" class="certificates-title">Professional Certifications & Achievements</h3>
+                    <div class="certificates-grid" role="list">
+                        <div class="certificate-item" data-cert="AWS Certified" role="listitem" tabindex="0"
+                            aria-label="AWS Cloud Architecture Certification">
+                            <div class="cert-logo">
+                                <img src="assets/images/aws-logo.svg" alt="AWS Certified Solutions Architect logo"
+                                    class="cert-image" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="certificate-item" data-cert="Google Cloud" role="listitem" tabindex="0"
+                            aria-label="Google Cloud Platform Certification">
+                            <div class="cert-logo">
+                                <img src="assets/images/gcp-logo.svg"
+                                    alt="Google Cloud Professional Cloud Architect logo" class="cert-image"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="certificate-item" data-cert="Microsoft Azure" role="listitem" tabindex="0"
+                            aria-label="Microsoft Azure Solutions Expert Certification">
+                            <div class="cert-logo">
+                                <img src="assets/images/azure-logo.svg"
+                                    alt="Microsoft Azure Solutions Architect Expert logo" class="cert-image"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="certificate-item" data-cert="React Certified" role="listitem" tabindex="0"
+                            aria-label="React Development Certification">
+                            <div class="cert-logo">
+                                <img src="assets/images/react-logo.svg"
+                                    alt="React Professional Developer Certification logo" class="cert-image"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="certificate-item" data-cert="Digital Marketing" role="listitem" tabindex="0"
+                            aria-label="Digital Marketing Strategy Certification">
+                            <div class="cert-logo">
+                                <img src="assets/images/marketing-logo.svg"
+                                    alt="Google Digital Marketing & E-commerce Certification logo" class="cert-image"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poetic Statement Section -->
+                <div class="poetic-section">
+                    <div class="poetic-container">
+                        <div class="poetic-content">
+                            <div class="poetic-quote">
+                                <span class="quote-mark">"</span>
+                                <p class="poetic-text">
+                                    In the symphony of code and creativity,<br>
+                                    where logic meets imagination,<br>
+                                    I craft digital dreams into reality—<br>
+                                    <em>one pixel, one line, one vision at a time.</em>
+                                </p>
+                                <span class="quote-mark closing">"</span>
+                            </div>
+                            <div class="poetic-author">
+                                <span class="author-line"></span>
+                                <span class="author-name">Digital Artisan</span>
+                            </div>
+                        </div>
+                        <div class="poetic-background">
+                            <div class="floating-elements">
+                                <div class="element element-1"></div>
+                                <div class="element element-2"></div>
+                                <div class="element element-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="full-screen section" aria-labelledby="services-title">
+                <!-- Animated Background -->
+                <div class="animated-circles-area" aria-hidden="true">
+                    <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div class="services-header">
+                    <h2 id="services-title">Our Professional Services</h2>
+                    <p class="services-subtitle">Comprehensive digital solutions tailored to accelerate your success in
+                        the modern digital landscape</p>
+                </div>
+                <div class="services-grid" role="region" aria-label="Available services">
+                    <!-- Training Programs -->
+                    <article class="service-card" data-service="surgalt" tabindex="0" role="article"
+                        aria-labelledby="surgalt-title">
+                        <div class="service-image">
+                            <img src="assets/images/surgalt1.jpg"
+                                alt="Professional training classroom with students learning web development and programming skills"
+                                loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3 id="surgalt-title">Surgalt Training Programs</h3>
+                            <p class="service-description">
+                                Comprehensive professional training programs in web development, data science, and
+                                emerging technologies.
+                                Build practical skills through hands-on projects and expert mentorship.
+                            </p>
+                            <div class="service-features" role="list" aria-label="Service features">
+                                <span class="feature-tag" role="listitem">Professional Training</span>
+                                <span class="feature-tag" role="listitem">Industry Certifications</span>
+                                <span class="feature-tag" role="listitem">Expert Mentorship</span>
+                            </div>
+                            <a href="html/surgalt.html" class="service-link" aria-describedby="surgalt-title">
+                                <span>Explore Training Programs</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" aria-hidden="true">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Mentorship Services -->
+                    <article class="service-card" data-service="zuwluguu" tabindex="0" role="article"
+                        aria-labelledby="zuwluguu-title">
+                        <div class="service-image">
+                            <img src="assets/images/surgalt2.jpg"
+                                alt="One-on-one mentoring session with career coach providing strategic guidance"
+                                loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3 id="zuwluguu-title">Zuwluguu Mentorship & Coaching</h3>
+                            <p class="service-description">
+                                Personalized mentorship and strategic career coaching services. Get expert guidance
+                                to accelerate your professional growth and navigate complex career decisions.
+                            </p>
+                            <div class="service-features" role="list" aria-label="Service features">
+                                <span class="feature-tag" role="listitem">Career Coaching</span>
+                                <span class="feature-tag" role="listitem">Strategic Planning</span>
+                                <span class="feature-tag" role="listitem">Personal Advisory</span>
+                            </div>
+                            <a href="html/zuwluguu.html" class="service-link" aria-describedby="zuwluguu-title">
+                                <span>Explore Mentorship Services</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" aria-hidden="true">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Digital Transformation -->
+                    <article class="service-card" data-service="td" tabindex="0" role="article"
+                        aria-labelledby="td-title">
+                        <div class="service-image">
+                            <img src="assets/images/surgalt3.jpg"
+                                alt="Digital transformation dashboard displaying modern analytics, cloud infrastructure and business optimization metrics"
+                                loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3 id="td-title">TD Digital Transformation</h3>
+                            <p class="service-description">
+                                Complete digital transformation solutions for businesses and organizations. Modernize
+                                your
+                                operations, technology infrastructure, and processes for competitive advantage in the
+                                digital era.
+                            </p>
+                            <div class="service-features" role="list" aria-label="Service features">
+                                <span class="feature-tag" role="listitem">Digital Transformation</span>
+                                <span class="feature-tag" role="listitem">Technology Innovation</span>
+                                <span class="feature-tag" role="listitem">Process Modernization</span>
+                            </div>
+                            <a href="html/TD.html" class="service-link" aria-describedby="td-title">
+                                <span>Explore Digital Solutions</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" aria-hidden="true">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Client Testimonials -->
+            <section id="portfolio" class="full-screen section" aria-labelledby="testimonials-title">
+                <h2 id="testimonials-title">What Our Clients Say</h2>
+                <div class="portfolio-container">
+                    <div class="infinite-scroll-container" role="region" aria-label="Client testimonials carousel"
+                        aria-live="polite">
+                        <!-- Client Review 1 -->
+                        <article class="comment-card" data-date="March 15, 2024" role="article" tabindex="0"
+                            aria-labelledby="client1-name">
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <img src="assets/images/review1.jpg"
+                                        alt="Portrait of Л.Цогжавхлан, professional web developer" class="client-image"
+                                        loading="lazy">
+                                    <div class="client-info">
+                                        <h4 id="client1-name">Л.Цогжавхлан</h4>
+                                        <span>Senior Web Developer</span>
+                                    </div>
+                                </div>
+                                <p>"The training program exceeded my expectations. The hands-on approach and real-world
+                                    projects helped me grow significantly as a developer and advance my career to senior
+                                    level."</p>
+                            </div>
+                        </article>
+
+                        <!-- Client Review 2 -->
+                        <article class="comment-card" data-date="February 28, 2024" role="article" tabindex="0"
+                            aria-labelledby="client2-name">
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <img src="assets/images/review2.jpg"
+                                        alt="Portrait of Jane Smith, experienced UX designer" class="client-image"
+                                        loading="lazy">
+                                    <div class="client-info">
+                                        <h4 id="client2-name">Jane Smith</h4>
+                                        <span>Senior UX Designer</span>
+                                    </div>
+                                </div>
+                                <p>"The mentorship program provided invaluable guidance and helped me transition into UX
+                                    design smoothly. The personalized coaching approach made all the difference in my
+                                    career development."</p>
+                            </div>
+                        </article>
+
+                        <!-- Client Review 3 -->
+                        <article class="comment-card" data-date="April 8, 2024" role="article" tabindex="0"
+                            aria-labelledby="client3-name">
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <img src="assets/images/portrait.jpg"
+                                        alt="Portrait of Mike Johnson, digital marketing executive" class="client-image"
+                                        loading="lazy">
+                                    <div class="client-info">
+                                        <h4 id="client3-name">Mike Johnson</h4>
+                                        <span>Digital Marketing Director</span>
+                                    </div>
+                                </div>
+                                <p>"The digital transformation consultation helped our company modernize our processes
+                                    and improve efficiency by 40%. The strategic approach and technical expertise were
+                                    exceptional."</p>
+                            </div>
+                        </article>
+
+                        <!-- Client Review 4 -->
+                        <article class="comment-card" data-date="January 12, 2024" role="article" tabindex="0"
+                            aria-labelledby="client4-name">
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <img src="assets/images/review1.jpg"
+                                        alt="Portrait of Sarah Wilson, senior project manager" class="client-image"
+                                        loading="lazy">
+                                    <div class="client-info">
+                                        <h4 id="client4-name">Sarah Wilson</h4>
+                                        <span>Senior Project Manager</span>
+                                    </div>
+                                </div>
+                                <p>"Outstanding service and attention to detail. The comprehensive digital strategy
+                                    delivered
+                                    beyond our expectations and helped us achieve our transformation goals ahead of
+                                    schedule."</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="full-screen section" aria-labelledby="contact-title">
+                <h2 id="contact-title">Холбоо барих</h2>
+                <p class="contact-tagline">Ready to start your digital transformation journey? <br> Let's connect and
+                    discuss
+                    how we can help you achieve your goals.</p>
+                <div class="contact-grid" role="region" aria-label="Contact information and form">
+                    <!-- Contact Methods -->
+                    <div class="contact-cards-container" role="group" aria-label="Contact methods">
+                        <a href="mailto:email@example.com" class="contact-card small-card" data-card="1"
+                            aria-label="Send email to email@example.com">
+                            <div class="contact-card-inner">
+                                <div class="contact-icon" aria-hidden="true">📧</div>
+                                <h3>Email</h3>
+                                <div class="contact-info">
+                                    <span class="contact-link">email@example.com</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <button class="contact-card small-card" data-card="2" data-phone="+123 456 7890" type="button"
+                            aria-label="Copy phone number +123 456 7890">
+                            <div class="contact-card-inner">
+                                <div class="contact-icon" aria-hidden="true">📱</div>
+                                <h3>Phone</h3>
+                                <div class="contact-info">
+                                    <span class="contact-link">+123 456 7890</span>
+                                </div>
+                                <span class="copy-indicator">Click to copy</span>
+                            </div>
+                        </button>
+
+                        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"
+                            class="contact-card small-card" data-card="3" aria-label="Visit LinkedIn profile">
+                            <div class="contact-card-inner">
+                                <div class="contact-icon" aria-hidden="true">💼</div>
+                                <h3>LinkedIn</h3>
+                                <div class="contact-info">
+                                    <span class="contact-link">linkedin.com/in/your-profile</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer"
+                            class="contact-card small-card" data-card="4" aria-label="Visit GitHub profile">
+                            <div class="contact-card-inner">
+                                <div class="contact-icon" aria-hidden="true">💻</div>
+                                <h3>GitHub</h3>
+                                <div class="contact-info">
+                                    <span class="contact-link">github.com/your-username</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container" role="region" aria-labelledby="form-title">
+                        <h3 id="form-title">Send Me a Message</h3>
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name" required
+                                        aria-describedby="name-error">
+                                    <span id="name-error" class="error-message" aria-live="polite"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Your phone number"
+                                        aria-describedby="phone-error">
+                                    <span id="phone-error" class="error-message" aria-live="polite"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="Your email address" required
+                                    aria-describedby="email-error">
+                                <span id="email-error" class="error-message" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Subject of your message"
+                                    aria-describedby="subject-error">
+                                <span id="subject-error" class="error-message" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" placeholder="Your message..." required rows="5"
+                                    aria-describedby="message-error"></textarea>
+                                <span id="message-error" class="error-message" aria-live="polite"></span>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="button-wrap">
+                                <button type="submit" aria-describedby="submit-status">
+                                    <span>Send Message</span>
+                                </button>
+                                <div class="button-shadow" aria-hidden="true"></div>
+                            </div>
+                            <div id="submit-status" class="form-status" aria-live="polite"></div>
+
+                            <!-- Background Pattern -->
+                            <svg style="position: absolute; width: 100%; height: 100%; z-index: 0;" width="100%"
+                                height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <defs>
+                                    <pattern id="dottedGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+                                        <circle cx="2" cy="2" r="1" fill="rgba(115,0,255,0.15)" />
+                                    </pattern>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#dottedGrid)" />
+                            </svg>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 StepUp Digital - Professional Digital Services & Training</p>
+    </footer>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "StepUp Digital",
+        "jobTitle": "Digital Solutions Expert",
+        "description": "Professional web developer and digital transformation specialist with 8+ years of experience",
+        "url": "https://yoursite.com/",
+        "image": "https://yoursite.com/assets/images/portrait.jpg",
+        "sameAs": [
+            "https://www.linkedin.com/in/your-profile",
+            "https://github.com/your-username"
+        ],
+        "knowsAbout": [
+            "Web Development",
+            "Digital Transformation",
+            "Professional Training",
+            "Mentorship",
+            "React Development",
+            "Full-Stack Development"
+        ],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "AWS Certified Solutions Architect",
+                "credentialCategory": "Cloud Architecture"
+            },
+            {
+                "@type": "EducationalOccupationalCredential", 
+                "name": "Google Cloud Professional Architect",
+                "credentialCategory": "Cloud Computing"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Microsoft Azure Solutions Expert",
+                "credentialCategory": "Cloud Solutions"
+            }
+        ],
+        "offers": [
+            {
+                "@type": "Service",
+                "name": "Professional Training Programs",
+                "description": "Comprehensive training in web development, data science, and emerging technologies",
+                "url": "https://yoursite.com/html/surgalt.html"
+            },
+            {
+                "@type": "Service", 
+                "name": "Mentorship & Coaching",
+                "description": "Personalized career coaching and professional development guidance",
+                "url": "https://yoursite.com/html/zuwluguu.html"
+            },
+            {
+                "@type": "Service",
+                "name": "Digital Transformation",
+                "description": "Complete digital transformation solutions for businesses and organizations",
+                "url": "https://yoursite.com/html/TD.html"
+            }
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+123-456-7890",
+            "contactType": "Customer Service",
+            "email": "email@example.com"
+        }
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/shared.js"></script>
+    <script type="module" src="src/main.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const loadingElement = document.querySelector('.loading');
+            if (loadingElement) {
+                loadingElement.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

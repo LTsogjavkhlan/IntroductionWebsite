@@ -1,0 +1,625 @@
+/*
+Google Fonts Import: Import Montserrat and Poppins for use throughout the site
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;600&display=swap');
+
+/*
+Base Styles: Reset and global settings for all elements
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    padding-top: 60px;
+    /* Offset for fixed menu */
+}
+
+/*
+Main Menu Styles: Fixed navigation bar at the top
+*/
+.main-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 12, 41, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    height: 65px;
+    transition: all 0.2s ease;
+    transform: translateY(0);
+    will-change: transform, height;
+}
+
+.main-menu nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    max-width: 80%;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    gap: 2rem;
+}
+
+/*
+Logo Styles: Logo container and image in the menu - now centered
+*/
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    transition: all 0.2s ease;
+    background: transparent;
+    padding: 0 1rem;
+    order: 1;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.2s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.2);
+}
+
+/* 
+Nav Links: Centered layout
+*/
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    order: 2;
+}
+
+/* Ensure nav-links without left/right classes also work properly */
+.nav-links:not(.nav-links-left):not(.nav-links-right) {
+    order: 2;
+}
+
+.nav-links-left {
+    order: 0;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links-right {
+    order: 2;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/*
+Button Styles: For navigation and general buttons
+*/
+.button {
+    display: inline-flex;
+    position: relative;
+    background: transparent;
+    line-height: 1.6rem;
+    padding: 0.2rem 1rem;
+    margin: 0 0.3rem;
+    min-width: 70px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transform: translateZ(0);
+    will-change: transform, background-color;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.button__inner {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.button__text {
+    display: block;
+    color: white;
+    transform: translateY(0);
+    transition: transform 0.15s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-size: 13px;
+}
+
+.button__hover {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    color: #000;
+    transform: translateY(0);
+    transition: transform 0.15s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-size: 13px;
+}
+
+/*
+Button States: Hover, active, and section-active states for navigation buttons
+*/
+.button:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.button:hover .button__text {
+    transform: translateY(-100%);
+}
+
+.button:hover .button__hover {
+    transform: translateY(-100%);
+}
+
+/* Active button (current page) styling */
+.button.active-section {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.button.active-section .button__text {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.button.active-section .button__hover {
+    transform: translateY(-100%);
+}
+
+/* Regular active state (clicked) */
+.button.active {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.button.active .button__text {
+    transform: translateY(-100%);
+}
+
+.button.active .button__hover {
+    transform: translateY(-100%);
+}
+
+/*
+Common Slider Styles: Container, navigation arrows, and indicators
+*/
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    touch-action: pan-y pinch-zoom;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.slider-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.slider-nav.prev {
+    left: 20px;
+}
+
+.slider-nav.next {
+    right: 20px;
+}
+
+.slide-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+/*
+Wave Transition: SVG wave animation for section transitions
+*/
+.wave-transition {
+    position: relative;
+    height: 15vh;
+    margin-top: -15vh;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*
+Responsive Design: Adjustments for tablets and mobile devices
+*/
+/* Hide hamburger menu by default (desktop) */
+.hamburger-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-menu nav {
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .logo-container {
+        padding: 0 0.5rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        color: white;
+        transform: translateZ(0);
+        will-change: transform;
+        -webkit-tap-highlight-color: transparent;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+
+    .hamburger-menu:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .main-menu.mobile-open .hamburger-menu {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hamburger-menu svg {
+        transition: transform 0.2s ease;
+    }
+
+    .hamburger-menu:active svg {
+        transform: scale(0.9);
+    }
+
+    /* Mobile navigation menu */
+    .mobile-nav-links {
+        display: none !important;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 12, 41, 0.98);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: none;
+        border-radius: 0 0 20px 20px;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1rem;
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .main-menu.mobile-open .mobile-nav-links {
+        display: flex !important;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Mobile navigation divider */
+    .mobile-nav-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        margin: 0.5rem 0;
+        opacity: 0.6;
+    }
+
+    /* Hide regular nav-links on mobile */
+    .nav-links-left,
+    .nav-links-right {
+        display: none;
+    }
+
+    .mobile-nav-links .button {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        min-height: 48px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Mobile touch states */
+    .button:active {
+        transform: scale(0.98);
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .button:hover::before {
+        left: 100%;
+    }
+
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .wave-transition {
+        height: 10vh;
+        margin-top: -10vh;
+    }
+
+    .slider-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-nav svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .main-menu {
+        top: 32px;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 40px;
+        background: rgba(30, 30, 60, 0.45);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 65px;
+    }
+
+    .main-menu nav {
+        padding: 0 2.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        padding-top: 80px;
+    }
+}
+
+/* Additional mobile responsiveness for centered menu */
+@media (max-width: 480px) {
+    .main-menu nav {
+        gap: 0.75rem;
+    }
+
+    .logo-container {
+        padding: 0 0.5rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .nav-links-left,
+    .nav-links-right {
+        gap: 0.5rem;
+    }
+}
+
+/* Ensure centered layout works well on desktop */
+@media (min-width: 769px) {
+    .main-menu nav {
+        gap: 2.5rem;
+    }
+
+    .nav-links-left,
+    .nav-links-right {
+        gap: 1.25rem;
+        display: flex;
+        /* Ensure nav links are visible on desktop */
+    }
+
+    /* Ensure all nav links are visible on desktop */
+    .nav-links {
+        display: flex !important;
+        position: static !important;
+        width: auto !important;
+        background: transparent !important;
+        flex-direction: row !important;
+        padding: 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Hide mobile menu on desktop */
+    .mobile-nav-links {
+        display: none !important;
+    }
+
+    /* Ensure hamburger menu is hidden on desktop */
+    .hamburger-menu {
+        display: none !important;
+    }
+}
+
+/* Active-section button styling - grey deactivated look */
+.main-menu nav a.active-section {
+    background-color: #aaaaaa !important;
+    transform: scale(1) !important;
+    color: #555555 !important;
+    cursor: default !important;
+    opacity: 0.8 !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+}
+
+.main-menu nav a.active-section .button__text {
+    color: #555555 !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+
+.main-menu nav a.active-section .button__hover {
+    display: none !important;
+}
+
+/* Remove any hover effects on active-section */
+.main-menu nav a.active-section:hover {
+    background-color: #aaaaaa !important;
+    transform: scale(1) !important;
+    color: #555555 !important;
+}
+
+/* Override any JavaScript hover effects */
+.main-menu nav a.active-section * {
+    transition: none !important;
+}

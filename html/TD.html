@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>TD Products - Premium Product Gallery & Showcase</title>
+    <meta name="description"
+        content="Explore our premium TD product collection with interactive 3D gallery, detailed specifications, and immersive viewing experience. Shop high-quality products with confidence.">
+    <meta name="keywords" content="TD products, premium products, product gallery, online shopping, high-quality items">
+    <meta name="author" content="StepUp">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="TD Products - Premium Product Gallery">
+    <meta property="og:description" content="Interactive product showcase with 3D gallery and detailed specifications">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com/TD.html">
+    <meta property="og:image" content="../assets/images/card1.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TD Products - Premium Product Gallery">
+    <meta name="twitter:description" content="Interactive product showcase with 3D gallery">
+    <meta name="twitter:image" content="../assets/images/card1.jpg">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="../assets/images/card1.jpg" as="image">
+    <link rel="preload" href="../js/vendor/gsap.min.js" as="script">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/local-fonts.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/TD.css">
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+
+<body>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <!-- Navigation Header -->
+    <header class="main-menu" role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <!-- Services Navigation -->
+            <div class="nav-links nav-links-left">
+                <a href="surgalt.html" class="button js-button" aria-label="Go to Surgalt page">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Surgalt</span>
+                        <span class="button__hover js-button__hover">Surgalt</span>
+                    </span>
+                </a>
+                <a href="zuwluguu.html" class="button js-button" aria-label="Go to Zuwluguu page">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Zuwluguu</span>
+                        <span class="button__hover js-button__hover">Zuwluguu</span>
+                    </span>
+                </a>
+                <a href="TD.html" class="button js-button active-section" aria-current="page"
+                    aria-label="TD page - currently viewing"
+                    style="background-color: #aaaaaa; transform: scale(1); color: #555555; opacity: 0.8; cursor: default;">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text" style="color: #555555;">TD</span>
+                        <span class="button__hover js-button__hover" style="display: none;">TD</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="../index.html" class="logo-link" aria-label="Go to homepage">
+                    <img src="../assets/images/logo.jpg" alt="StepUp Logo" class="logo-image">
+                </a>
+            </div>
+
+            <!-- Main Navigation -->
+            <div class="nav-links nav-links-right">
+                <a href="../index.html#contact" class="button js-button" aria-label="Go to Contact section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Contact</span>
+                        <span class="button__hover js-button__hover">Contact</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Container -->
+            <div class="mobile-nav-links" style="display: none;">
+                <!-- Home Link -->
+                <a href="../index.html" class="button js-button" aria-label="Go to homepage">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Home</span>
+                        <span class="button__hover js-button__hover">Home</span>
+                    </span>
+                </a>
+
+                <!-- Page Links -->
+                <a href="surgalt.html" class="button js-button" aria-label="Go to Surgalt page">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Surgalt</span>
+                        <span class="button__hover js-button__hover">Surgalt</span>
+                    </span>
+                </a>
+                <a href="zuwluguu.html" class="button js-button" aria-label="Go to Zuwluguu page">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Zuwluguu</span>
+                        <span class="button__hover js-button__hover">Zuwluguu</span>
+                    </span>
+                </a>
+                <a href="TD.html" class="button js-button active-section" aria-current="page"
+                    aria-label="TD page - currently viewing">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">TD</span>
+                        <span class="button__hover js-button__hover">TD</span>
+                    </span>
+                </a>
+
+                <!-- Divider -->
+                <div class="mobile-nav-divider"></div>
+
+                <!-- Contact Link -->
+                <a href="../index.html#contact" class="button js-button" aria-label="Go to Contact section">
+                    <span class="button__inner">
+                        <span class="button__text js-button__text">Contact</span>
+                        <span class="button__hover js-button__hover">Contact</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger-menu" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main-content" id="main-content">
+        <!-- Product Carousel Section -->
+        <section class="gallery-background-wrapper" aria-label="Interactive product carousel">
+            <div class="gallery-background" role="presentation" aria-hidden="true"></div>
+            <div class="gallery" id="cards-view">
+                <ul class="cards" role="region" aria-label="Product carousel" aria-live="polite">
+                    <li data-bg="../assets/images/card1.jpg" role="group" aria-label="Product 1">
+                        <div class="product-image" data-product="product1" role="button" tabindex="0"
+                            aria-label="View Product 1 gallery">
+                            <img src="../assets/images/card1.jpg"
+                                alt="Premium Electronics Product - High Quality Device" loading="lazy">
+                            <div class="gallery-overlay" aria-hidden="true">
+                                <div class="gallery-icon">🖼️</div>
+                                <div class="gallery-text">Click to see more photos</div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Premium Electronics</h3>
+                            <p class="product-price" aria-label="Price: $99.99">$99.99</p>
+                            <p class="product-description">High-quality electronic device with advanced features,
+                                durable materials, and comprehensive warranty coverage.</p>
+                        </div>
+                    </li>
+                    <li data-bg="../assets/images/card2.jpg">
+                        <div class="product-image" data-product="product2">
+                            <img src="../assets/images/card2.jpg" alt="Product 2">
+                            <div class="gallery-overlay">
+                                <div class="gallery-icon">🖼️</div>
+                                <div class="gallery-text">Click to see more photos</div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Product Name 2</h3>
+                            <p class="product-price">$149.99</p>
+                            <p class="product-description">Description of the second product. Highlight key features and
+                                benefits.</p>
+                        </div>
+                    </li>
+                    <li data-bg="../assets/images/card3.jpg">
+                        <div class="product-image" data-product="product3">
+                            <img src="../assets/images/card3.jpg" alt="Product 3">
+                            <div class="gallery-overlay">
+                                <div class="gallery-icon">🖼️</div>
+                                <div class="gallery-text">Click to see more photos</div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Product Name 3</h3>
+                            <p class="product-price">$199.99</p>
+                            <p class="product-description">Details about the third product. Perfect for describing
+                                special
+                                features.</p>
+                        </div>
+                    </li>
+                    <li data-bg="../assets/images/card4.jpg">
+                        <div class="product-image" data-product="product4">
+                            <img src="../assets/images/card4.jpg" alt="Product 4">
+                            <div class="gallery-overlay">
+                                <div class="gallery-icon">🖼️</div>
+                                <div class="gallery-text">Click to see more photos</div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Product Name 4</h3>
+                            <p class="product-price">$249.99</p>
+                            <p class="product-description">Description of the fourth product. Perfect for showcasing
+                                additional
+                                features.</p>
+                        </div>
+                    </li>
+                    <li data-bg="../assets/images/portrait.jpg">
+                        <div class="product-image" data-product="product5">
+                            <img src="../assets/images/portrait.jpg" alt="Product 5">
+                            <div class="gallery-overlay">
+                                <div class="gallery-icon">🖼️</div>
+                                <div class="gallery-text">Click to see more photos</div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Product Name 5</h3>
+                            <p class="product-price">$299.99</p>
+                            <p class="product-description">Description of the fifth product. Highlighting unique
+                                qualities
+                                and
+                                benefits.</p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Carousel Navigation -->
+                <div class="actions" role="group" aria-label="Carousel navigation">
+                    <div class="button-wrap prev-button">
+                        <button class="prev" aria-label="Go to previous product" type="button">
+                            <span>Previous</span>
+                        </button>
+                        <div class="button-shadow" aria-hidden="true"></div>
+                    </div>
+                    <div class="button-wrap next-button">
+                        <button class="next" aria-label="Go to next product" type="button">
+                            <span>Next</span>
+                        </button>
+                        <div class="button-shadow" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="dot-indicators" role="group" aria-label="Product indicators">
+                    <button class="dot" data-index="0" aria-label="Go to product 1" type="button"></button>
+                    <button class="dot" data-index="1" aria-label="Go to product 2" type="button"></button>
+                    <button class="dot" data-index="2" aria-label="Go to product 3" type="button"></button>
+                    <button class="dot" data-index="3" aria-label="Go to product 4" type="button"></button>
+                    <button class="dot" data-index="4" aria-label="Go to product 5" type="button"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid Section -->
+        <section class="list-section" id="list-view" aria-label="All products grid view">
+            <h2 class="sr-only">Complete Product Collection</h2>
+            <div class="products-grid" role="grid">
+                <!-- Product Card 1 -->
+                <div class="product-card" data-category="electronics">
+                    <div class="product-image" data-product="product1">
+                        <img src="../assets/images/card1.jpg" alt="Product 1" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">🖼️</div>
+                            <div class="gallery-text">Click to see more photos</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Product Name 1</h3>
+                        <div class="product-price">$99.99</div>
+                        <div class="product-description">
+                            <p>Description of the first product. You can add details about features, materials, and
+                                specifications that make this product unique.</p>
+                            <div class="product-features">
+                                <span class="feature">High Quality</span>
+                                <span class="feature">Durable</span>
+                                <span class="feature">Warranty</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card" data-category="fashion">
+                    <div class="product-image" data-product="product2">
+                        <img src="../assets/images/card2.jpg" alt="Product 2" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">🖼️</div>
+                            <div class="gallery-text">Click to see more photos</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Product Name 2</h3>
+                        <div class="product-price">$149.99</div>
+                        <div class="product-description">
+                            <p>Description of the second product. Highlight key features and benefits that customers
+                                will love about this item.</p>
+                            <div class="product-features">
+                                <span class="feature">Premium Quality</span>
+                                <span class="feature">Comfortable</span>
+                                <span class="feature">Stylish</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card" data-category="home">
+                    <div class="product-image" data-product="product3">
+                        <img src="../assets/images/card3.jpg" alt="Product 3" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">🖼️</div>
+                            <div class="gallery-text">Click to see more photos</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Product Name 3</h3>
+                        <div class="product-price">$199.99</div>
+                        <div class="product-description">
+                            <p>Details about the third product. Perfect for describing special features and what
+                                makes this product stand out from the competition.</p>
+                            <div class="product-features">
+                                <span class="feature">Eco-Friendly</span>
+                                <span class="feature">Easy Setup</span>
+                                <span class="feature">Modern Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card" data-category="sports">
+                    <div class="product-image" data-product="product4">
+                        <img src="../assets/images/card4.jpg" alt="Product 4" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">🖼️</div>
+                            <div class="gallery-text">Click to see more photos</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Product Name 4</h3>
+                        <div class="product-price">$249.99</div>
+                        <div class="product-description">
+                            <p>Description of the fourth product. Perfect for showcasing additional features and
+                                benefits that appeal to your target audience.</p>
+                            <div class="product-features">
+                                <span class="feature">Professional Grade</span>
+                                <span class="feature">Lightweight</span>
+                                <span class="feature">Versatile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card" data-category="premium">
+                    <div class="product-image" data-product="product5">
+                        <img src="../assets/images/portrait.jpg" alt="Product 5" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">🖼️</div>
+                            <div class="gallery-text">Click to see more photos</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Product Name 5</h3>
+                        <div class="product-price">$299.99</div>
+                        <div class="product-description">
+                            <p>Description of the fifth product. Highlighting unique qualities and benefits that
+                                make this a premium choice for discerning customers.</p>
+                            <div class="product-features">
+                                <span class="feature">Luxury Materials</span>
+                                <span class="feature">Handcrafted</span>
+                                <span class="feature">Limited Edition</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image" data-product="product6">
+                        <img src="../assets/images/service1.jpg" alt="Product 6" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">🖼️</div>
+                            <div class="gallery-text">Click to see more photos</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Product Name 6</h3>
+                        <div class="product-price">$79.99</div>
+                        <div class="product-description">
+                            <p>Perfect accessory to complement your main products. High-quality materials and
+                                attention to detail make this a must-have item.</p>
+                            <div class="product-features">
+                                <span class="feature">Compatible</span>
+                                <span class="feature">Compact</span>
+                                <span class="feature">Essential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="full-screen section">
+        <h2>Холбоо барих</h2>
+        <p class="contact-tagline">Want to chat? Pick your poison.</p>
+        <div class="contact-grid">
+            <!-- Left Side - Contact Cards -->
+            <div class="contact-cards-container">
+                <a href="mailto:email@example.com" class="contact-card small-card" data-card="1">
+                    <div class="contact-card-inner">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <div class="contact-info">
+                            <span class="contact-link">email@example.com</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="contact-card small-card" data-card="2" data-phone="+123 456 7890">
+                    <div class="contact-card-inner">
+                        <div class="contact-icon">📱</div>
+                        <h3>Phone</h3>
+                        <div class="contact-info">
+                            <span class="contact-link">+123 456 7890</span>
+                        </div>
+                        <span class="copy-indicator">Click to copy</span>
+                    </div>
+                </div>
+
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"
+                    class="contact-card small-card" data-card="3" aria-label="Visit LinkedIn profile">
+                    <div class="contact-card-inner">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <div class="contact-info">
+                            <span class="contact-link">linkedin.com/in/your-profile</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer"
+                    class="contact-card small-card" data-card="4" aria-label="Visit GitHub profile">
+                    <div class="contact-card-inner">
+                        <div class="contact-icon">💻</div>
+                        <h3>GitHub</h3>
+                        <div class="contact-info">
+                            <span class="contact-link">github.com/your-username</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Right Side - email form -->
+            <div class="contact-form-container">
+                <h3>Send Me a Message</h3>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject of your message">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                    </div>
+                    <!-- Button -->
+                    <div class="button-wrap">
+                        <button type="submit">
+                            <span>Send Message</span>
+                        </button>
+                        <div class="button-shadow"></div>
+                    </div>
+
+                    <!-- Background -->
+                    <svg style="position: absolute; width: 100%; height: 100%; z-index: 0;" width="100%" height="100%"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="dottedGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+                                <circle cx="2" cy="2" r="1" fill="rgba(115,0,255,0.15)" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#dottedGrid)" />
+                    </svg>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local GSAP Scripts -->
+    <script src="../js/vendor/gsap.min.js"></script>
+    <script src="../js/vendor/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="../js/shared.js"></script>
+    <script src="../js/TD.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const loadingElement = document.querySelector('.loading');
+            if (loadingElement) {
+                loadingElement.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- Image Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="gallery-title"
+        aria-hidden="true">
+        <div class="gallery-container">
+            <!-- Gallery Header -->
+            <div class="gallery-header">
+                <h3 class="gallery-title" id="gallery-title">Product Gallery</h3>
+                <button class="gallery-close" id="galleryClose" aria-label="Close gallery" type="button">×</button>
+            </div>
+
+            <!-- Main Image Display -->
+            <div class="gallery-main">
+                <button class="gallery-nav gallery-prev" id="galleryPrev" aria-label="Previous image"
+                    type="button">‹</button>
+                <img src="" alt="" class="main-image" id="mainImage" role="img">
+                <button class="gallery-nav gallery-next" id="galleryNext" aria-label="Next image"
+                    type="button">›</button>
+                <div class="image-counter" id="imageCounter" aria-live="polite">1 / 5</div>
+            </div>
+
+            <!-- Image Thumbnails -->
+            <div class="gallery-thumbnails" id="galleryThumbnails" role="group" aria-label="Image thumbnails">
+                <!-- Thumbnails populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "TD Products - Premium Product Gallery",
+        "description": "Interactive product showcase with premium electronics, fashion items, and accessories",
+        "url": "https://yoursite.com/TD.html",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "Product",
+                    "position": 1,
+                    "name": "Premium Electronics",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "99.99",
+                        "priceCurrency": "USD"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- EmailJS Configuration -->
+    <script src="../js/emailjs-config.js"></script>
+</body>
+
+</html>
+
+</html>

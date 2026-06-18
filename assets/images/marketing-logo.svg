@@ -1,0 +1,7 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="80" rx="10" fill="#E91E63"/>
+  <circle cx="40" cy="30" r="12" fill="none" stroke="white" stroke-width="2"/>
+  <path d="M40 18 L45 25 L40 32 L35 25 Z" fill="white"/>
+  <text x="40" y="55" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Digital</text>
+  <text x="40" y="68" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="bold">Marketing</text>
+</svg> 
