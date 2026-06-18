@@ -385,46 +385,46 @@ function initializeListSection() {
 // Product image galleries - simulate multiple images per product
 const productGalleries = {
     product1: [
-        '../assets/images/card1.jpg',
-        '../assets/images/card2.jpg',
-        '../assets/images/card3.jpg',
-        '../assets/images/card4.jpg',
-        '../assets/images/portrait.jpg'
+        'assets/images/card1.jpg',
+        'assets/images/card2.jpg',
+        'assets/images/card3.jpg',
+        'assets/images/card4.jpg',
+        'assets/images/portrait.jpg'
     ],
     product2: [
-        '../assets/images/card2.jpg',
-        '../assets/images/card1.jpg',
-        '../assets/images/card4.jpg',
-        '../assets/images/portrait.jpg',
-        '../assets/images/card3.jpg'
+        'assets/images/card2.jpg',
+        'assets/images/card1.jpg',
+        'assets/images/card4.jpg',
+        'assets/images/portrait.jpg',
+        'assets/images/card3.jpg'
     ],
     product3: [
-        '../assets/images/card3.jpg',
-        '../assets/images/card4.jpg',
-        '../assets/images/card1.jpg',
-        '../assets/images/portrait.jpg',
-        '../assets/images/card2.jpg'
+        'assets/images/card3.jpg',
+        'assets/images/card4.jpg',
+        'assets/images/card1.jpg',
+        'assets/images/portrait.jpg',
+        'assets/images/card2.jpg'
     ],
     product4: [
-        '../assets/images/card4.jpg',
-        '../assets/images/portrait.jpg',
-        '../assets/images/card2.jpg',
-        '../assets/images/card1.jpg',
-        '../assets/images/card3.jpg'
+        'assets/images/card4.jpg',
+        'assets/images/portrait.jpg',
+        'assets/images/card2.jpg',
+        'assets/images/card1.jpg',
+        'assets/images/card3.jpg'
     ],
     product5: [
-        '../assets/images/portrait.jpg',
-        '../assets/images/card1.jpg',
-        '../assets/images/card3.jpg',
-        '../assets/images/card2.jpg',
-        '../assets/images/card4.jpg'
+        'assets/images/portrait.jpg',
+        'assets/images/card1.jpg',
+        'assets/images/card3.jpg',
+        'assets/images/card2.jpg',
+        'assets/images/card4.jpg'
     ],
     product6: [
-        '../assets/images/service1.jpg',
-        '../assets/images/card1.jpg',
-        '../assets/images/card2.jpg',
-        '../assets/images/card3.jpg',
-        '../assets/images/card4.jpg'
+        'assets/images/service1.jpg',
+        'assets/images/card1.jpg',
+        'assets/images/card2.jpg',
+        'assets/images/card3.jpg',
+        'assets/images/card4.jpg'
     ]
 };
 
