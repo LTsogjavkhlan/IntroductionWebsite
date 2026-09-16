@@ -1,11 +1,13 @@
-// Initialize when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
+// Wait for the CMS-driven content to finish rendering (js/content-loader.js)
+// before setting up animations, so they run against real content instead of
+// an empty/static-fallback container.
+document.addEventListener("content:rendered", () => {
     initHeroAnimations();
     initCategoryAnimations();
     initCoursesSectionAnimations();
     initToggleCoursesSection();
     initSmoothScroll();
-    initFormValidation();
+    // Contact form submission is handled by js/contact-form.js
 });
 
 // Hero animations
@@ -99,28 +101,6 @@ function initCategoryAnimations() {
         }
     });
 
-    // Individual card scroll triggers
-    categoryCards.forEach((card, index) => {
-        gsap.set(card, {
-            opacity: 0,
-            y: 50
-        });
-
-        ScrollTrigger.create({
-            trigger: card,
-            start: "top 85%",
-            onEnter: () => {
-                gsap.to(card, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.8,
-                    delay: index * 0.1,
-                    ease: "power2.out"
-                });
-            },
-            once: true
-        });
-    });
 }
 
 // Courses section animations
@@ -343,19 +323,6 @@ function initToggleCoursesSection() {
     });
 }
 
-// Apply parallax effect to the hero section
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-
-    if (scrollPosition < window.innerHeight) {
-        gsap.to('.hero-content', {
-            y: scrollPosition * 0.2,
-            duration: 0.5,
-            ease: "power1.out"
-        });
-    }
-});
-
 // Initialize smooth scrolling for category links
 function initSmoothScroll() {
     const categoryLinks = document.querySelectorAll('.category-link');
@@ -387,108 +354,4 @@ function initSmoothScroll() {
     });
 }
 
-// Form validation and submission
-function initFormValidation() {
-    const form = document.getElementById('contact-form');
-    const statusDiv = document.getElementById('submit-status');
-
-    if (!form || !statusDiv) return;
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        // Clear previous errors
-        clearFormErrors();
-
-        // Validate form
-        if (!validateForm()) {
-            showFormStatus('Please fix the errors above.', 'error');
-            return;
-        }
-
-        // Show loading state
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.querySelector('span').textContent;
-        submitBtn.querySelector('span').textContent = 'Sending...';
-        submitBtn.disabled = true;
-
-        try {
-            // Simulate form submission (replace with actual EmailJS call)
-            await new Promise(resolve => setTimeout(resolve, 2000));
-
-            showFormStatus('Message sent successfully!', 'success');
-            form.reset();
-        } catch (error) {
-            showFormStatus('Failed to send message. Please try again.', 'error');
-        } finally {
-            submitBtn.querySelector('span').textContent = originalText;
-            submitBtn.disabled = false;
-        }
-    });
-}
-
-// Clear form error messages
-function clearFormErrors() {
-    const errorMessages = document.querySelectorAll('.error-message');
-    errorMessages.forEach(error => error.textContent = '');
-}
-
-// Validate form fields
-function validateForm() {
-    let isValid = true;
-
-    // Name validation
-    const name = document.getElementById('name');
-    if (!name.value.trim()) {
-        showFieldError('name-error', 'Name is required');
-        isValid = false;
-    }
-
-    // Email validation
-    const email = document.getElementById('email');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email.value.trim()) {
-        showFieldError('email-error', 'Email is required');
-        isValid = false;
-    } else if (!emailRegex.test(email.value)) {
-        showFieldError('email-error', 'Please enter a valid email');
-        isValid = false;
-    }
-
-    // Message validation
-    const message = document.getElementById('message');
-    if (!message.value.trim()) {
-        showFieldError('message-error', 'Message is required');
-        isValid = false;
-    } else if (message.value.trim().length < 10) {
-        showFieldError('message-error', 'Message must be at least 10 characters');
-        isValid = false;
-    }
-
-    return isValid;
-}
-
-// Show field error message
-function showFieldError(errorId, message) {
-    const errorElement = document.getElementById(errorId);
-    if (errorElement) {
-        errorElement.textContent = message;
-    }
-}
-
-// Show form status message
-function showFormStatus(message, type) {
-    const statusDiv = document.getElementById('submit-status');
-    if (statusDiv) {
-        statusDiv.textContent = message;
-        statusDiv.className = `form-status ${type}`;
-        statusDiv.style.display = 'block';
-
-        // Auto-hide success messages
-        if (type === 'success') {
-            setTimeout(() => {
-                statusDiv.style.display = 'none';
-            }, 5000);
-        }
-    }
-}
+// Contact form validation and submission now lives in js/contact-form.js (shared across all pages)

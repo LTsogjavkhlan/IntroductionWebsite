@@ -7,10 +7,11 @@
 
     <!-- SEO Meta Tags -->
     <title>TD Products - Premium Product Gallery & Showcase</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <meta name="description"
         content="Explore our premium TD product collection with interactive 3D gallery, detailed specifications, and immersive viewing experience. Shop high-quality products with confidence.">
     <meta name="keywords" content="TD products, premium products, product gallery, online shopping, high-quality items">
-    <meta name="author" content="StepUp">
+    <meta name="author" content="MindOra">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="TD Products - Premium Product Gallery">
@@ -36,9 +37,9 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 
-<body>
+<body data-page="td">
     <!-- Skip Navigation -->
-    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <a href="#main-content" class="skip-nav">Үндсэн хэсэг рүү очих</a>
 
     <!-- Navigation Header -->
     <header class="main-menu" role="banner">
@@ -70,7 +71,19 @@
             <!-- Logo -->
             <div class="logo-container">
                 <a href="index.html" class="logo-link" aria-label="Go to homepage">
-                    <img src="assets/images/logo.jpg" alt="StepUp Logo" class="logo-image">
+                    <svg class="logo-image" viewBox="0 0 160 160" role="img" aria-label="MindOra logo"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" stroke-width="9">
+                            <circle cx="80" cy="80" r="20" stroke="#3ED0C4" stroke-dasharray="90 35"
+                                transform="rotate(-90 80 80)" />
+                            <circle cx="80" cy="80" r="35" stroke="#ffffff" stroke-dasharray="158 62"
+                                transform="rotate(-50 80 80)" />
+                            <circle cx="80" cy="80" r="50" stroke="#3ED0C4" stroke-dasharray="226 88"
+                                transform="rotate(-10 80 80)" />
+                            <circle cx="80" cy="80" r="65" stroke="#ffffff" stroke-dasharray="294 114"
+                                transform="rotate(30 80 80)" />
+                        </g>
+                    </svg>
                 </a>
             </div>
 
@@ -78,8 +91,8 @@
             <div class="nav-links nav-links-right">
                 <a href="index.html#contact" class="button js-button" aria-label="Go to Contact section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Contact</span>
-                        <span class="button__hover js-button__hover">Contact</span>
+                        <span class="button__text js-button__text">Холбоо барих</span>
+                        <span class="button__hover js-button__hover">Холбоо барих</span>
                     </span>
                 </a>
             </div>
@@ -89,8 +102,8 @@
                 <!-- Home Link -->
                 <a href="index.html" class="button js-button" aria-label="Go to homepage">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Home</span>
-                        <span class="button__hover js-button__hover">Home</span>
+                        <span class="button__text js-button__text">Нүүр</span>
+                        <span class="button__hover js-button__hover">Нүүр</span>
                     </span>
                 </a>
 
@@ -121,8 +134,8 @@
                 <!-- Contact Link -->
                 <a href="index.html#contact" class="button js-button" aria-label="Go to Contact section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Contact</span>
-                        <span class="button__hover js-button__hover">Contact</span>
+                        <span class="button__text js-button__text">Холбоо барих</span>
+                        <span class="button__hover js-button__hover">Холбоо барих</span>
                     </span>
                 </a>
             </div>
@@ -139,282 +152,35 @@
     </header>
 
     <main class="main-content" id="main-content">
-        <!-- Product Carousel Section -->
-        <section class="gallery-background-wrapper" aria-label="Interactive product carousel">
-            <div class="gallery-background" role="presentation" aria-hidden="true"></div>
-            <div class="gallery" id="cards-view">
-                <ul class="cards" role="region" aria-label="Product carousel" aria-live="polite">
-                    <li data-bg="assets/images/card1.jpg" role="group" aria-label="Product 1">
-                        <div class="product-image" data-product="product1" role="button" tabindex="0"
-                            aria-label="View Product 1 gallery">
-                            <img src="assets/images/card1.jpg"
-                                alt="Premium Electronics Product - High Quality Device" loading="lazy">
-                            <div class="gallery-overlay" aria-hidden="true">
-                                <div class="gallery-icon">🖼️</div>
-                                <div class="gallery-text">Click to see more photos</div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Premium Electronics</h3>
-                            <p class="product-price" aria-label="Price: $99.99">$99.99</p>
-                            <p class="product-description">High-quality electronic device with advanced features,
-                                durable materials, and comprehensive warranty coverage.</p>
-                        </div>
-                    </li>
-                    <li data-bg="assets/images/card2.jpg">
-                        <div class="product-image" data-product="product2">
-                            <img src="assets/images/card2.jpg" alt="Product 2">
-                            <div class="gallery-overlay">
-                                <div class="gallery-icon">🖼️</div>
-                                <div class="gallery-text">Click to see more photos</div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Product Name 2</h3>
-                            <p class="product-price">$149.99</p>
-                            <p class="product-description">Description of the second product. Highlight key features and
-                                benefits.</p>
-                        </div>
-                    </li>
-                    <li data-bg="assets/images/card3.jpg">
-                        <div class="product-image" data-product="product3">
-                            <img src="assets/images/card3.jpg" alt="Product 3">
-                            <div class="gallery-overlay">
-                                <div class="gallery-icon">🖼️</div>
-                                <div class="gallery-text">Click to see more photos</div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Product Name 3</h3>
-                            <p class="product-price">$199.99</p>
-                            <p class="product-description">Details about the third product. Perfect for describing
-                                special
-                                features.</p>
-                        </div>
-                    </li>
-                    <li data-bg="assets/images/card4.jpg">
-                        <div class="product-image" data-product="product4">
-                            <img src="assets/images/card4.jpg" alt="Product 4">
-                            <div class="gallery-overlay">
-                                <div class="gallery-icon">🖼️</div>
-                                <div class="gallery-text">Click to see more photos</div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Product Name 4</h3>
-                            <p class="product-price">$249.99</p>
-                            <p class="product-description">Description of the fourth product. Perfect for showcasing
-                                additional
-                                features.</p>
-                        </div>
-                    </li>
-                    <li data-bg="assets/images/portrait.jpg">
-                        <div class="product-image" data-product="product5">
-                            <img src="assets/images/portrait.jpg" alt="Product 5">
-                            <div class="gallery-overlay">
-                                <div class="gallery-icon">🖼️</div>
-                                <div class="gallery-text">Click to see more photos</div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Product Name 5</h3>
-                            <p class="product-price">$299.99</p>
-                            <p class="product-description">Description of the fifth product. Highlighting unique
-                                qualities
-                                and
-                                benefits.</p>
-                        </div>
-                    </li>
-                </ul>
-                <!-- Carousel Navigation -->
-                <div class="actions" role="group" aria-label="Carousel navigation">
-                    <div class="button-wrap prev-button">
-                        <button class="prev" aria-label="Go to previous product" type="button">
-                            <span>Previous</span>
-                        </button>
-                        <div class="button-shadow" aria-hidden="true"></div>
-                    </div>
-                    <div class="button-wrap next-button">
-                        <button class="next" aria-label="Go to next product" type="button">
-                            <span>Next</span>
-                        </button>
-                        <div class="button-shadow" aria-hidden="true"></div>
-                    </div>
-                </div>
-
-                <!-- Carousel Indicators -->
-                <div class="dot-indicators" role="group" aria-label="Product indicators">
-                    <button class="dot" data-index="0" aria-label="Go to product 1" type="button"></button>
-                    <button class="dot" data-index="1" aria-label="Go to product 2" type="button"></button>
-                    <button class="dot" data-index="2" aria-label="Go to product 3" type="button"></button>
-                    <button class="dot" data-index="3" aria-label="Go to product 4" type="button"></button>
-                    <button class="dot" data-index="4" aria-label="Go to product 5" type="button"></button>
-                </div>
+        <!-- Hero Section -->
+        <section class="hero-section" role="banner" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title" class="hero-title">Онцлох Бүтээгдэхүүнүүд</h1>
+                <p class="hero-subtitle">Чанар, эдэлгээтэй байдалд анхаарсан, сонгомол бүтээгдэхүүний
+                    цуглуулгыг үзнэ үү.</p>
             </div>
         </section>
 
         <!-- Product Grid Section -->
         <section class="list-section" id="list-view" aria-label="All products grid view">
-            <h2 class="sr-only">Complete Product Collection</h2>
+            <h2 class="sr-only">Бүрэн Бүтээгдэхүүний Цуглуулга</h2>
             <div class="products-grid" role="grid">
-                <!-- Product Card 1 -->
-                <div class="product-card" data-category="electronics">
-                    <div class="product-image" data-product="product1">
-                        <img src="assets/images/card1.jpg" alt="Product 1" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon">🖼️</div>
-                            <div class="gallery-text">Click to see more photos</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Product Name 1</h3>
-                        <div class="product-price">$99.99</div>
-                        <div class="product-description">
-                            <p>Description of the first product. You can add details about features, materials, and
-                                specifications that make this product unique.</p>
-                            <div class="product-features">
-                                <span class="feature">High Quality</span>
-                                <span class="feature">Durable</span>
-                                <span class="feature">Warranty</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 2 -->
-                <div class="product-card" data-category="fashion">
-                    <div class="product-image" data-product="product2">
-                        <img src="assets/images/card2.jpg" alt="Product 2" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon">🖼️</div>
-                            <div class="gallery-text">Click to see more photos</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Product Name 2</h3>
-                        <div class="product-price">$149.99</div>
-                        <div class="product-description">
-                            <p>Description of the second product. Highlight key features and benefits that customers
-                                will love about this item.</p>
-                            <div class="product-features">
-                                <span class="feature">Premium Quality</span>
-                                <span class="feature">Comfortable</span>
-                                <span class="feature">Stylish</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 3 -->
-                <div class="product-card" data-category="home">
-                    <div class="product-image" data-product="product3">
-                        <img src="assets/images/card3.jpg" alt="Product 3" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon">🖼️</div>
-                            <div class="gallery-text">Click to see more photos</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Product Name 3</h3>
-                        <div class="product-price">$199.99</div>
-                        <div class="product-description">
-                            <p>Details about the third product. Perfect for describing special features and what
-                                makes this product stand out from the competition.</p>
-                            <div class="product-features">
-                                <span class="feature">Eco-Friendly</span>
-                                <span class="feature">Easy Setup</span>
-                                <span class="feature">Modern Design</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 4 -->
-                <div class="product-card" data-category="sports">
-                    <div class="product-image" data-product="product4">
-                        <img src="assets/images/card4.jpg" alt="Product 4" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon">🖼️</div>
-                            <div class="gallery-text">Click to see more photos</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Product Name 4</h3>
-                        <div class="product-price">$249.99</div>
-                        <div class="product-description">
-                            <p>Description of the fourth product. Perfect for showcasing additional features and
-                                benefits that appeal to your target audience.</p>
-                            <div class="product-features">
-                                <span class="feature">Professional Grade</span>
-                                <span class="feature">Lightweight</span>
-                                <span class="feature">Versatile</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 5 -->
-                <div class="product-card" data-category="premium">
-                    <div class="product-image" data-product="product5">
-                        <img src="assets/images/portrait.jpg" alt="Product 5" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon">🖼️</div>
-                            <div class="gallery-text">Click to see more photos</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Product Name 5</h3>
-                        <div class="product-price">$299.99</div>
-                        <div class="product-description">
-                            <p>Description of the fifth product. Highlighting unique qualities and benefits that
-                                make this a premium choice for discerning customers.</p>
-                            <div class="product-features">
-                                <span class="feature">Luxury Materials</span>
-                                <span class="feature">Handcrafted</span>
-                                <span class="feature">Limited Edition</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 6 -->
-                <div class="product-card" data-category="accessories">
-                    <div class="product-image" data-product="product6">
-                        <img src="assets/images/service1.jpg" alt="Product 6" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-icon">🖼️</div>
-                            <div class="gallery-text">Click to see more photos</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Product Name 6</h3>
-                        <div class="product-price">$79.99</div>
-                        <div class="product-description">
-                            <p>Perfect accessory to complement your main products. High-quality materials and
-                                attention to detail make this a must-have item.</p>
-                            <div class="product-features">
-                                <span class="feature">Compatible</span>
-                                <span class="feature">Compact</span>
-                                <span class="feature">Essential</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Populated dynamically by js/content-loader.js from MongoDB -->
             </div>
-            </div>
+        </section>
     </main>
 
     <!-- Contact Section -->
     <section id="contact" class="full-screen section">
         <h2>Холбоо барих</h2>
-        <p class="contact-tagline">Want to chat? Pick your poison.</p>
+        <p class="contact-tagline">Ярилцахыг хүсэж байна уу? Хүссэн сувгаараа холбогдоорой.</p>
         <div class="contact-grid">
             <!-- Left Side - Contact Cards -->
             <div class="contact-cards-container">
                 <a href="mailto:email@example.com" class="contact-card small-card" data-card="1">
                     <div class="contact-card-inner">
                         <div class="contact-icon">📧</div>
-                        <h3>Email</h3>
+                        <h3>Имэйл</h3>
                         <div class="contact-info">
                             <span class="contact-link">email@example.com</span>
                         </div>
@@ -424,11 +190,11 @@
                 <div class="contact-card small-card" data-card="2" data-phone="+123 456 7890">
                     <div class="contact-card-inner">
                         <div class="contact-icon">📱</div>
-                        <h3>Phone</h3>
+                        <h3>Утас</h3>
                         <div class="contact-info">
                             <span class="contact-link">+123 456 7890</span>
                         </div>
-                        <span class="copy-indicator">Click to copy</span>
+                        <span class="copy-indicator">Хуулахын тулд дарна уу</span>
                     </div>
                 </div>
 
@@ -457,34 +223,44 @@
 
             <!-- Right Side - email form -->
             <div class="contact-form-container">
-                <h3>Send Me a Message</h3>
-                <form id="contact-form" class="contact-form">
+                <h3>Мессеж Илгээх</h3>
+                <form id="contact-form" class="contact-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                            <label for="name">Нэр</label>
+                            <input type="text" id="name" name="name" placeholder="Таны нэр" required
+                                aria-describedby="name-error">
+                            <span id="name-error" class="error-message" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                            <label for="phone">Утас</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Таны утасны дугаар"
+                                aria-describedby="phone-error">
+                            <span id="phone-error" class="error-message" aria-live="polite"></span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <label for="email">Имэйл</label>
+                        <input type="email" id="email" name="email" placeholder="Таны имэйл хаяг" required
+                            aria-describedby="email-error">
+                        <span id="email-error" class="error-message" aria-live="polite"></span>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject of your message">
+                        <label for="subject">Гарчиг</label>
+                        <input type="text" id="subject" name="subject" placeholder="Таны мессежийн гарчиг"
+                            aria-describedby="subject-error">
+                        <span id="subject-error" class="error-message" aria-live="polite"></span>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                        <label for="message">Мессеж</label>
+                        <textarea id="message" name="message" placeholder="Таны мессеж..." required
+                            aria-describedby="message-error"></textarea>
+                        <span id="message-error" class="error-message" aria-live="polite"></span>
                     </div>
                     <!-- Button -->
                     <div class="button-wrap">
                         <button type="submit">
-                            <span>Send Message</span>
+                            <span>Илгээх</span>
                         </button>
                         <div class="button-shadow"></div>
                     </div>
@@ -510,6 +286,8 @@
 
     <!-- Custom Scripts -->
     <script src="js/shared.js"></script>
+    <script src="js/html-utils.js"></script>
+    <script src="js/content-loader.js"></script>
     <script src="js/TD.js"></script>
     <script>
         window.addEventListener('load', () => {
@@ -525,7 +303,7 @@
         <div class="gallery-container">
             <!-- Gallery Header -->
             <div class="gallery-header">
-                <h3 class="gallery-title" id="gallery-title">Product Gallery</h3>
+                <h3 class="gallery-title" id="gallery-title">Бүтээгдэхүүний Зургууд</h3>
                 <button class="gallery-close" id="galleryClose" aria-label="Close gallery" type="button">×</button>
             </div>
 
@@ -572,12 +350,8 @@
     }
     </script>
 
-    <!-- EmailJS Script -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- EmailJS Configuration -->
-    <script src="js/emailjs-config.js"></script>
+    <!-- Contact Form -->
+    <script src="js/contact-form.js"></script>
 </body>
-
-</html>
 
 </html>

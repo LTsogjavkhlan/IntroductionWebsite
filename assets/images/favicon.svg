@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="MindOra">
+    <g fill="none" stroke-width="9">
+        <circle cx="80" cy="80" r="20" stroke="#069494" stroke-dasharray="90 35" transform="rotate(-90 80 80)" />
+        <circle cx="80" cy="80" r="35" stroke="#1E1A4D" stroke-dasharray="158 62" transform="rotate(-50 80 80)" />
+        <circle cx="80" cy="80" r="50" stroke="#069494" stroke-dasharray="226 88" transform="rotate(-10 80 80)" />
+        <circle cx="80" cy="80" r="65" stroke="#1E1A4D" stroke-dasharray="294 114" transform="rotate(30 80 80)" />
+    </g>
+</svg>

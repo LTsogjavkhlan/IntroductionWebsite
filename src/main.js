@@ -1,8 +1,10 @@
 // Entry point for the project
 import './style.css';
 
-// Wait for DOM content to be fully loaded
-document.addEventListener("DOMContentLoaded", () => {
+// Wait for the CMS-driven hero content to finish rendering (js/content-loader.js)
+// before setting up the slider/animations, so they run against real content
+// instead of an empty container.
+document.addEventListener("content:rendered", () => {
     // Check if GSAP is loaded
     if (typeof gsap === 'undefined') {
         console.error('GSAP is not loaded! Please check if the GSAP script tags are properly included.');
@@ -41,19 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
             refreshPriority: -1,
             ignoreMobileResize: true
         });
-    }
-
-    // Custom debounce function
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
     }
 
     // Initialize all components
@@ -182,8 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Main initialization function
     function init() {
-        initMenuAnimation();
-        initMenuItemAnimations();
+        // Nav entrance/hover animation is handled by shared.js (was duplicated here before)
         initServiceCardAnimations();
         initContactAnimations();
         initAboutSectionAnimations();
@@ -192,6 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setupSlider();
         lazyLoad();
         setupInfiniteScroll();
+        initShowcaseAnimations();
     }
 
     // Make sure ScrollTrigger is refreshed when window is fully loaded
@@ -200,37 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ScrollTrigger.refresh(true);
     });
 
-    // Menu scroll animation - simplified to work with shared menu structure
-    function initMenuAnimation() {
-        const mainMenu = document.querySelector('.main-menu');
-        if (!mainMenu) return;
-
-        // Let shared.css handle all the styling
-        // No need for complex GSAP animations here since shared.js handles menu functionality
-    }
-
-    // Menu item hover and entrance animations
-    function initMenuItemAnimations() {
-        const menuLinks = document.querySelectorAll('.main-menu .button');
-
-        menuLinks.forEach(link => {
-            // Clear any existing styles first
-            gsap.set(link, { clearProps: "all" });
-
-            // We'll let CSS handle the hover animations
-            // This removes the complex GSAP hover animations that were causing lag
-        });
-
-        // Keep the entrance animation
-        gsap.from(menuLinks, {
-            y: -10,
-            opacity: 0,
-            duration: 0.3,
-            stagger: 0.05,
-            ease: 'power1.out',
-            clearProps: 'all'
-        });
-    }
 
     // Service Card Animations - Simplified for grid layout
     function initServiceCardAnimations() {
@@ -302,9 +260,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Contact section animations
     function initContactAnimations() {
-        // Initialize submit button animations
-        initSubmitButtonAnimations();
-
         // Handle phone card click to copy
         const phoneCard = document.querySelector('.contact-card[data-phone]');
         if (phoneCard) {
@@ -410,117 +365,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Submit button GSAP animations
-    function initSubmitButtonAnimations() {
-        const submitButton = document.querySelector('.submit-button');
-        if (!submitButton) return;
 
-        // Create shine element since we can't easily target ::before with GSAP
-        const shineElement = document.createElement('div');
-        shineElement.style.cssText = `
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            pointer-events: none;
-            z-index: 1;
-        `;
-        submitButton.appendChild(shineElement);
-
-        // Hover enter animation
-        submitButton.addEventListener('mouseenter', () => {
-            if (submitButton.disabled) return;
-
-            gsap.to(submitButton, {
-                scale: 1.05,
-                duration: 0.3,
-                ease: "power2.out",
-                boxShadow: "0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)"
-            });
-
-            // Shine effect
-            gsap.fromTo(shineElement,
-                { left: '-100%' },
-                {
-                    left: '100%',
-                    duration: 0.6,
-                    ease: "power2.out"
-                }
-            );
-        });
-
-        // Hover leave animation
-        submitButton.addEventListener('mouseleave', () => {
-            if (submitButton.disabled) return;
-
-            gsap.to(submitButton, {
-                scale: 1,
-                duration: 0.3,
-                ease: "power2.out",
-                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)"
-            });
-        });
-
-        // Click/tap animation
-        submitButton.addEventListener('mousedown', () => {
-            if (submitButton.disabled) return;
-
-            gsap.to(submitButton, {
-                scale: 0.95,
-                duration: 0.1,
-                ease: "power2.out"
-            });
-        });
-
-        submitButton.addEventListener('mouseup', () => {
-            if (submitButton.disabled) return;
-
-            gsap.to(submitButton, {
-                scale: 1.05,
-                duration: 0.2,
-                ease: "back.out(1.7)"
-            });
-        });
-
-        // Touch events for mobile
-        submitButton.addEventListener('touchstart', () => {
-            if (submitButton.disabled) return;
-
-            gsap.to(submitButton, {
-                scale: 0.95,
-                duration: 0.1,
-                ease: "power2.out"
-            });
-        });
-
-        submitButton.addEventListener('touchend', () => {
-            if (submitButton.disabled) return;
-
-            gsap.to(submitButton, {
-                scale: 1,
-                duration: 0.3,
-                ease: "back.out(1.7)"
-            });
-        });
-    }
-
-    // About section animations - Now handled by initAboutAnimatedBackground
+    // About section animations - main content is handled by glass cards (initAboutAnimatedBackground)
     function initAboutSectionAnimations() {
         const aboutSection = document.querySelector('.about-section');
         if (!aboutSection) return;
 
-        // Only animate certificates now, the main content is handled by glass cards
-        const certificates = aboutSection.querySelectorAll('.certificate-item');
+        const statItems = aboutSection.querySelectorAll('.stat-item');
 
-        // Certificates animation
-        certificates.forEach((cert, index) => {
+        gsap.set(statItems, { y: 20, opacity: 0 });
+        statItems.forEach((stat, index) => {
             ScrollTrigger.create({
-                trigger: cert,
+                trigger: stat,
                 start: 'top bottom-=50',
                 onEnter: () => {
-                    gsap.to(cert, {
+                    gsap.to(stat, {
                         y: 0,
                         opacity: 1,
                         delay: index * 0.1,
@@ -530,6 +389,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
+    }
+
+    // Showcase sections (TD/Surgalt/Zuwluguu teasers) - simple fade/stagger on
+    // scroll into view, matching the lighter IntersectionObserver-based
+    // pattern used for TD's product grid rather than a heavy GSAP timeline.
+    function initShowcaseAnimations() {
+        const sections = document.querySelectorAll('.showcase-section');
+        if (!sections.length) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const cards = entry.target.querySelectorAll('.teaser-card');
+                gsap.fromTo(cards,
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: 'power2.out' }
+                );
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.15 });
+
+        sections.forEach((section) => observer.observe(section));
     }
 
     // About Section animated background and glass cards
@@ -636,67 +517,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
 
-            // Enhanced hover animations
-            const cardIcon = card.querySelector('.card-icon');
-            const cardInner = card.querySelector('.glass-card-inner');
-            const highlights = card.querySelectorAll('.highlight');
-
+            // Simple hover lift (previously: tilt + icon scale/rotate + staggered
+            // highlight scale all firing at once - simplified for a calmer feel)
             card.addEventListener('mouseenter', () => {
-                // Card tilt effect
                 gsap.to(card, {
-                    rotationX: 5,
-                    rotationY: 5,
+                    y: -6,
+                    scale: 1.02,
                     duration: 0.3,
                     ease: 'power2.out'
-                });
-
-                // Icon animation
-                if (cardIcon) {
-                    gsap.to(cardIcon, {
-                        scale: 1.2,
-                        rotation: 10,
-                        duration: 0.3,
-                        ease: 'back.out(1.7)'
-                    });
-                }
-
-                // Highlight animations
-                highlights.forEach((highlight, i) => {
-                    gsap.to(highlight, {
-                        scale: 1.05,
-                        delay: i * 0.05,
-                        duration: 0.2,
-                        ease: 'power2.out'
-                    });
                 });
             });
 
             card.addEventListener('mouseleave', () => {
-                // Reset card tilt
                 gsap.to(card, {
-                    rotationX: 0,
-                    rotationY: 0,
+                    y: 0,
+                    scale: 1,
                     duration: 0.3,
                     ease: 'power2.out'
-                });
-
-                // Reset icon
-                if (cardIcon) {
-                    gsap.to(cardIcon, {
-                        scale: 1,
-                        rotation: 0,
-                        duration: 0.3,
-                        ease: 'power2.out'
-                    });
-                }
-
-                // Reset highlights
-                highlights.forEach((highlight) => {
-                    gsap.to(highlight, {
-                        scale: 1,
-                        duration: 0.2,
-                        ease: 'power2.out'
-                    });
                 });
             });
 
@@ -1071,184 +908,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Mobile menu functionality now handled by shared.js
-
-// Contact form handling
-document.addEventListener('DOMContentLoaded', () => {
-    // Check if EmailJS config is loaded
-    if (!window.EMAILJS_CONFIG) {
-        console.error('EmailJS configuration not found! Please check js/emailjs-config.js');
-        return;
-    }
-
-    // Use the external configuration
-    const config = window.EMAILJS_CONFIG;
-
-    // Initialize EmailJS
-    emailjs.init(config.PUBLIC_KEY);
-
-    const contactForm = document.getElementById('contact-form');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            // Get form values
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const subject = document.getElementById('subject').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            // Basic validation
-            if (!name || !email || !message) {
-                showMessage('Please fill in all required fields.', 'error');
-                return;
-            }
-
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showMessage('Please enter a valid email address.', 'error');
-                return;
-            }
-
-            // Phone validation (optional field, but validate format if provided)
-            if (phone && phone.length > 0) {
-                const phoneRegex = /^\d{8}$/;
-                if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))) {
-                    showMessage('Please enter a valid 8-digit phone number.', 'error');
-                    return;
-                }
-            }
-
-            // Show loading state
-            const submitButton = contactForm.querySelector('.submit-button');
-            const originalButtonText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-
-            try {
-                // Prepare template parameters
-                const templateParams = {
-                    name: name,
-                    phone: phone || 'Not provided',
-                    email: email,
-                    subject: subject || 'Contact Form Submission',
-                    message: message,
-                    to_email: config.TO_EMAIL
-                };
-
-                // Send email using EmailJS
-                const response = await emailjs.send(
-                    config.SERVICE_ID,
-                    config.TEMPLATE_ID,
-                    templateParams
-                );
-
-                console.log('SUCCESS!', response.status, response.text);
-
-                // Show success message with glass popup
-                showGlassPopup('Thank you for sending email!');
-
-                // Reset form
-                contactForm.reset();
-
-            } catch (error) {
-                console.error('FAILED...', error);
-
-                // Show error message
-                let errorMessage = 'Failed to send message. Please try again.';
-
-                if (error.text) {
-                    errorMessage += ` Error: ${error.text}`;
-                } else if (error.message) {
-                    errorMessage += ` Error: ${error.message}`;
-                }
-
-                showMessage(errorMessage, 'error');
-            } finally {
-                // Reset button state
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-            }
-        });
-    }
-
-    // Function to show glass popup message
-    function showGlassPopup(message) {
-        // Remove existing popups
-        const existingPopups = document.querySelectorAll('.glass-popup-message');
-        existingPopups.forEach(popup => popup.remove());
-
-        // Create popup element
-        const popup = document.createElement('div');
-        popup.className = 'glass-popup-message';
-        popup.textContent = message;
-
-        // Add to body
-        document.body.appendChild(popup);
-
-        // Animate popup in with GSAP
-        gsap.set(popup, {
-            scale: 0,
-            opacity: 0,
-            rotation: -5
-        });
-
-        const tl = gsap.timeline();
-
-        // Popup appears
-        tl.to(popup, {
-            scale: 1,
-            opacity: 1,
-            rotation: 0,
-            duration: 0.6,
-            ease: "back.out(1.7)"
-        });
-
-        // Stay visible for 4 seconds
-        tl.to(popup, {
-            duration: 4
-        });
-
-        // Popup disappears
-        tl.to(popup, {
-            scale: 0,
-            opacity: 0,
-            rotation: 5,
-            duration: 0.4,
-            ease: "back.in(1.7)",
-            onComplete: () => {
-                if (popup.parentNode) {
-                    popup.remove();
-                }
-            }
-        });
-    }
-
-    // Function to show messages (for errors)
-    function showMessage(message, type = 'success') {
-        // Remove existing messages
-        const existingMessages = document.querySelectorAll('.form-message');
-        existingMessages.forEach(msg => msg.remove());
-
-        // Create message element
-        const messageElement = document.createElement('div');
-        messageElement.className = `form-message form-${type}-message`;
-        messageElement.textContent = message;
-
-        // Insert message above the form
-        contactForm.parentNode.insertBefore(messageElement, contactForm);
-
-        // Auto-remove message after 5 seconds
-        setTimeout(() => {
-            if (messageElement.parentNode) {
-                messageElement.remove();
-            }
-        }, 5000);
-
-        // Scroll to message
-        messageElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-
-});
+// Contact form handling now lives in js/contact-form.js (shared across all pages)

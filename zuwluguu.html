@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zuwluguu - Mentorship & Advice</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <!-- Local fonts instead of Google CDN -->
     <link rel="stylesheet" href="css/local-fonts.css">
     <link rel="stylesheet" href="css/shared.css">
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 
-<body>
+<body data-page="zuwluguu">
     <!-- Top Menu -->
     <header class="main-menu" role="banner">
         <nav role="navigation" aria-label="Main navigation">
@@ -43,7 +44,19 @@
             <!-- Logo -->
             <div class="logo-container">
                 <a href="index.html" class="logo-link" aria-label="Go to homepage">
-                    <img src="assets/images/logo.jpg" alt="StepUp Logo" class="logo-image">
+                    <svg class="logo-image" viewBox="0 0 160 160" role="img" aria-label="MindOra logo"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" stroke-width="9">
+                            <circle cx="80" cy="80" r="20" stroke="#3ED0C4" stroke-dasharray="90 35"
+                                transform="rotate(-90 80 80)" />
+                            <circle cx="80" cy="80" r="35" stroke="#ffffff" stroke-dasharray="158 62"
+                                transform="rotate(-50 80 80)" />
+                            <circle cx="80" cy="80" r="50" stroke="#3ED0C4" stroke-dasharray="226 88"
+                                transform="rotate(-10 80 80)" />
+                            <circle cx="80" cy="80" r="65" stroke="#ffffff" stroke-dasharray="294 114"
+                                transform="rotate(30 80 80)" />
+                        </g>
+                    </svg>
                 </a>
             </div>
 
@@ -51,8 +64,8 @@
             <div class="nav-links nav-links-right">
                 <a href="index.html#contact" class="button js-button" aria-label="Go to Contact section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Contact</span>
-                        <span class="button__hover js-button__hover">Contact</span>
+                        <span class="button__text js-button__text">Холбоо барих</span>
+                        <span class="button__hover js-button__hover">Холбоо барих</span>
                     </span>
                 </a>
             </div>
@@ -62,8 +75,8 @@
                 <!-- Home Link -->
                 <a href="index.html" class="button js-button" aria-label="Go to homepage">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Home</span>
-                        <span class="button__hover js-button__hover">Home</span>
+                        <span class="button__text js-button__text">Нүүр</span>
+                        <span class="button__hover js-button__hover">Нүүр</span>
                     </span>
                 </a>
 
@@ -94,8 +107,8 @@
                 <!-- Contact Link -->
                 <a href="index.html#contact" class="button js-button" aria-label="Go to Contact section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Contact</span>
-                        <span class="button__hover js-button__hover">Contact</span>
+                        <span class="button__text js-button__text">Холбоо барих</span>
+                        <span class="button__hover js-button__hover">Холбоо барих</span>
                     </span>
                 </a>
             </div>
@@ -114,95 +127,39 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">Guidance for Your Journey</h1>
-            <p class="hero-subtitle">Expert advice and mentorship to help you grow</p>
+            <h1 class="hero-title">Таны Аяллын Чиглүүлэгч</h1>
+            <p class="hero-subtitle">Өсөж хөгжихөд тань туслах туршлагатай зөвлөгөө, дэмжлэг</p>
             <div class="scroll-indicator">
                 <div class="mouse"></div>
             </div>
-        </div>
-        <div class="waves-container">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
-                    </path>
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(115,0,255,0.7)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(115,0,255,0.5)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(115,0,255,0.3)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#220442"></use>
-                </g>
-            </svg>
         </div>
     </section>
 
     <!-- Advice Cards Section -->
     <section class="advice-section">
         <div class="section-header">
-            <h2 class="section-title">Expert Advice</h2>
-            <p class="section-description">Practical guidance from industry professionals</p>
+            <h2 class="section-title">Мэргэжлийн Зөвлөгөө</h2>
+            <p class="section-description">Салбарын мэргэжилтнүүдийн бодит зөвлөгөө</p>
         </div>
 
-        <div class="advice-cards">
-            <!-- Card 1 -->
-            <div class="advice-card">
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z">
-                        </path>
-                    </svg>
-                </div>
-                <h3 class="card-title">ISO</h3>
-                <p class="card-content">Strategies to advance your career and achieve professional growth.</p>
-                <a href="#" class="card-link" data-study="career-study">View Case Studies →</a>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="advice-card">
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V8z">
-                        </path>
-                    </svg>
-                </div>
-                <h3 class="card-title">Skill Building</h3>
-                <p class="card-content">Essential skills for success in today's competitive environment.</p>
-                <a href="#" class="card-link" data-study="skill-study">View Research →</a>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="advice-card">
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z">
-                        </path>
-                    </svg>
-                </div>
-                <h3 class="card-title">Networking</h3>
-                <p class="card-content">Build meaningful professional relationships that last.</p>
-                <a href="#" class="card-link" data-study="network-study">View Success Stories →</a>
-            </div>
-        </div>
+        <!-- Populated dynamically by js/content-loader.js from MongoDB -->
+        <div class="advice-cards"></div>
     </section>
 
     <!-- Mentorship Section -->
     <section class="mentorship-section">
         <div class="mentorship-content">
             <div class="mentorship-text">
-                <h2 class="section-title">Personalized Mentorship</h2>
-                <p class="section-description">Connect with experienced mentors who can guide you through your specific
-                    challenges and goals.</p>
+                <h2 class="section-title">Хувь Хүнд Зориулсан Зөвлөгөө</h2>
+                <p class="section-description">Таны тодорхой бэрхшээл, зорилгод чиглүүлэн туслах туршлагатай
+                    зөвлөхтэй холбогдоорой.</p>
                 <ul class="mentorship-benefits">
-                    <li>One-on-one sessions tailored to your needs</li>
-                    <li>Accountability and progress tracking</li>
-                    <li>Access to exclusive resources</li>
-                    <li>Long-term career guidance</li>
+                    <li>Тан бүрийн хэрэгцээнд тохирсон нэг-нэгийн уулзалт</li>
+                    <li>Хариуцлага, ахиц дэвшлийг хянах</li>
+                    <li>Онцгой эх сурвалжид хандах боломж</li>
+                    <li>Урт хугацааны ажил мэргэжлийн чиглүүлэг</li>
                 </ul>
-                <a href="#" class="cta-button" id="mentor-cta">Find Your Mentor</a>
+                <a href="#" class="cta-button" id="mentor-cta">Зөвлөхөө Олох</a>
             </div>
             <div class="mentorship-image">
                 <div class="image-placeholder"></div>
@@ -214,25 +171,25 @@
     <div class="modal-overlay" id="study-modal">
         <div class="modal-content">
             <button class="modal-close">&times;</button>
-            <h3 class="modal-title" id="modal-study-title">Case Study</h3>
+            <h3 class="modal-title" id="modal-study-title">Судалгааны Жишээ</h3>
             <div class="modal-body" id="modal-study-content">
                 <!-- Content will be loaded here dynamically -->
             </div>
-            <a href="#" class="modal-link" id="modal-full-study">View Full Study</a>
+            <a href="#" class="modal-link" id="modal-full-study">Бүрэн Судалгааг Үзэх</a>
         </div>
     </div>
 
     <!-- Contact Section -->
     <section id="contact" class="full-screen section">
         <h2>Холбоо барих</h2>
-        <p class="contact-tagline">Want to chat? Pick your poison.</p>
+        <p class="contact-tagline">Ярилцахыг хүсэж байна уу? Хүссэн сувгаараа холбогдоорой.</p>
         <div class="contact-grid">
             <!-- Left Side - Contact Cards -->
             <div class="contact-cards-container">
                 <a href="mailto:email@example.com" class="contact-card small-card" data-card="1">
                     <div class="contact-card-inner">
                         <div class="contact-icon">📧</div>
-                        <h3>Email</h3>
+                        <h3>Имэйл</h3>
                         <div class="contact-info">
                             <span class="contact-link">email@example.com</span>
                         </div>
@@ -242,11 +199,11 @@
                 <div class="contact-card small-card" data-card="2" data-phone="+123 456 7890">
                     <div class="contact-card-inner">
                         <div class="contact-icon">📱</div>
-                        <h3>Phone</h3>
+                        <h3>Утас</h3>
                         <div class="contact-info">
                             <span class="contact-link">+123 456 7890</span>
                         </div>
-                        <span class="copy-indicator">Click to copy</span>
+                        <span class="copy-indicator">Хуулахын тулд дарна уу</span>
                     </div>
                 </div>
 
@@ -275,34 +232,44 @@
 
             <!-- Right Side - email form -->
             <div class="contact-form-container">
-                <h3>Send Me a Message</h3>
-                <form id="contact-form" class="contact-form">
+                <h3>Мессеж Илгээх</h3>
+                <form id="contact-form" class="contact-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                            <label for="name">Нэр</label>
+                            <input type="text" id="name" name="name" placeholder="Таны нэр" required
+                                aria-describedby="name-error">
+                            <span id="name-error" class="error-message" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                            <label for="phone">Утас</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Таны утасны дугаар"
+                                aria-describedby="phone-error">
+                            <span id="phone-error" class="error-message" aria-live="polite"></span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <label for="email">Имэйл</label>
+                        <input type="email" id="email" name="email" placeholder="Таны имэйл хаяг" required
+                            aria-describedby="email-error">
+                        <span id="email-error" class="error-message" aria-live="polite"></span>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject of your message">
+                        <label for="subject">Гарчиг</label>
+                        <input type="text" id="subject" name="subject" placeholder="Таны мессежийн гарчиг"
+                            aria-describedby="subject-error">
+                        <span id="subject-error" class="error-message" aria-live="polite"></span>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                        <label for="message">Мессеж</label>
+                        <textarea id="message" name="message" placeholder="Таны мессеж..." required
+                            aria-describedby="message-error"></textarea>
+                        <span id="message-error" class="error-message" aria-live="polite"></span>
                     </div>
                     <!-- Button -->
                     <div class="button-wrap">
                         <button type="submit">
-                            <span>Send Message</span>
+                            <span>Илгээх</span>
                         </button>
                         <div class="button-shadow"></div>
                     </div>
@@ -328,6 +295,8 @@
 
     <!-- Custom Scripts -->
     <script src="js/shared.js"></script>
+    <script src="js/html-utils.js"></script>
+    <script src="js/content-loader.js"></script>
     <script src="js/zuwluguu.js"></script>
     <script>
         window.addEventListener('load', () => {
@@ -337,10 +306,8 @@
             }
         });
     </script>
-    <!-- EmailJS Script -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- EmailJS Configuration -->
-    <script src="js/emailjs-config.js"></script>
+    <!-- Contact Form -->
+    <script src="js/contact-form.js"></script>
 </body>
 
 </html>

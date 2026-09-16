@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>MindOra Admin</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="css/local-fonts.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <form id="login-form" class="login-form">
+            <h1 class="brand-heading">
+                <svg class="brand-mark" viewBox="0 0 160 160" role="img" aria-label="MindOra logo"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke-width="9">
+                        <circle cx="80" cy="80" r="20" stroke="#069494" stroke-dasharray="90 35"
+                            transform="rotate(-90 80 80)" />
+                        <circle cx="80" cy="80" r="35" stroke="#1E1A4D" stroke-dasharray="158 62"
+                            transform="rotate(-50 80 80)" />
+                        <circle cx="80" cy="80" r="50" stroke="#069494" stroke-dasharray="226 88"
+                            transform="rotate(-10 80 80)" />
+                        <circle cx="80" cy="80" r="65" stroke="#1E1A4D" stroke-dasharray="294 114"
+                            transform="rotate(30 80 80)" />
+                    </g>
+                </svg>
+                MindOra Admin
+            </h1>
+            <label for="login-username">Нэвтрэх нэр</label>
+            <input type="text" id="login-username" name="username" autocomplete="username" required>
+            <label for="login-password">Нууц үг</label>
+            <input type="password" id="login-password" name="password" autocomplete="current-password" required>
+            <button type="submit" id="login-submit-btn">
+                <span class="btn-spinner" aria-hidden="true"></span>
+                <span class="btn-label">Нэвтрэх</span>
+            </button>
+            <p id="login-error" class="alert alert-error" role="alert" hidden></p>
+            <p id="login-success" class="alert alert-success" role="status" hidden></p>
+        </form>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard" hidden>
+        <header class="admin-header">
+            <h1 class="brand-heading">
+                <svg class="brand-mark" viewBox="0 0 160 160" role="img" aria-label="MindOra logo"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke-width="9">
+                        <circle cx="80" cy="80" r="20" stroke="#069494" stroke-dasharray="90 35"
+                            transform="rotate(-90 80 80)" />
+                        <circle cx="80" cy="80" r="35" stroke="#1E1A4D" stroke-dasharray="158 62"
+                            transform="rotate(-50 80 80)" />
+                        <circle cx="80" cy="80" r="50" stroke="#069494" stroke-dasharray="226 88"
+                            transform="rotate(-10 80 80)" />
+                        <circle cx="80" cy="80" r="65" stroke="#1E1A4D" stroke-dasharray="294 114"
+                            transform="rotate(30 80 80)" />
+                    </g>
+                </svg>
+                MindOra Admin
+            </h1>
+            <div class="admin-header-right">
+                <span id="admin-username"></span>
+                <button id="logout-btn" class="btn-secondary">Гарах</button>
+            </div>
+        </header>
+
+        <nav class="admin-tabs">
+            <button class="tab-btn active" data-tab="home" type="button">Нүүр</button>
+            <button class="tab-btn" data-tab="td" type="button">TD</button>
+            <button class="tab-btn" data-tab="surgalt" type="button">Surgalt</button>
+            <button class="tab-btn" data-tab="zuwluguu" type="button">Zuwluguu</button>
+        </nav>
+
+        <main class="admin-content">
+            <!-- Home -->
+            <section id="tab-home" class="tab-panel active">
+                <h2>Үндсэн Слайдууд</h2>
+                <p class="section-hint">Эдгээр нь нүүр хуудсан дээрх 4 эргэлддэг слайд юм.</p>
+                <div id="home-hero-list" class="item-list"></div>
+                <button id="home-hero-add-btn" class="btn-primary">+ Слайд Нэмэх</button>
+                <div id="home-hero-form-container"></div>
+            </section>
+
+            <!-- TD -->
+            <section id="tab-td" class="tab-panel">
+                <h2>Үндсэн Хэсэг</h2>
+                <div id="td-hero-form-container"></div>
+
+                <h2>Бүтээгдэхүүн</h2>
+                <div id="td-products-list" class="item-list"></div>
+                <button id="td-products-add-btn" class="btn-primary">+ Бүтээгдэхүүн Нэмэх</button>
+                <div id="td-products-form-container"></div>
+            </section>
+
+            <!-- Surgalt -->
+            <section id="tab-surgalt" class="tab-panel">
+                <h2>Үндсэн Хэсэг</h2>
+                <div id="surgalt-hero-form-container"></div>
+
+                <h2>Ангилал</h2>
+                <p class="section-hint">Surgalt хуудасны дээд хэсэгт харагдах 3 карт.</p>
+                <div id="surgalt-categories-list" class="item-list"></div>
+                <button id="surgalt-categories-add-btn" class="btn-primary">+ Ангилал Нэмэх</button>
+                <div id="surgalt-categories-form-container"></div>
+
+                <h2>Хичээлийн Бүлэг</h2>
+                <p class="section-hint">Доорх хичээлүүдийг агуулсан нэртэй бүлгүүд (жишээ нь "Суурь Хичээлүүд").</p>
+                <div id="surgalt-sections-list" class="item-list"></div>
+                <button id="surgalt-sections-add-btn" class="btn-primary">+ Бүлэг Нэмэх</button>
+                <div id="surgalt-sections-form-container"></div>
+
+                <h2>Хичээлүүд</h2>
+                <div id="surgalt-courses-list" class="item-list"></div>
+                <button id="surgalt-courses-add-btn" class="btn-primary">+ Хичээл Нэмэх</button>
+                <div id="surgalt-courses-form-container"></div>
+            </section>
+
+            <!-- Zuwluguu -->
+            <section id="tab-zuwluguu" class="tab-panel">
+                <h2>Үндсэн Хэсэг</h2>
+                <div id="zuwluguu-hero-form-container"></div>
+
+                <h2>Зөвлөгөөний Карт</h2>
+                <p class="section-hint">Карт бүр тохирох жишээ судалгааны popup-тай байна.</p>
+                <div id="zuwluguu-advice-list" class="item-list"></div>
+                <button id="zuwluguu-advice-add-btn" class="btn-primary">+ Зөвлөгөө Нэмэх</button>
+                <div id="zuwluguu-advice-form-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/html-utils.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- SEO Meta Tags -->
-    <title>StepUp Digital - Professional Web Development, Training & Digital Transformation Services</title>
+    <title>MindOra</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <meta name="description"
         content="Expert digital solutions including professional web development, comprehensive training programs, strategic mentoring, and complete digital transformation services. 8+ years of experience helping businesses and individuals succeed in the digital age.">
     <meta name="keywords"
         content="web development, digital transformation, professional training, mentoring services, coaching programs, digital solutions, web design, full-stack development, career advancement, skill development">
-    <meta name="author" content="StepUp Digital">
+    <meta name="author" content="MindOra">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="StepUp Digital - Professional Digital Services & Training">
+    <meta property="og:title" content="MindOra - Professional Digital Services & Training">
     <meta property="og:description"
         content="Transform your digital journey with expert web development, comprehensive training programs, and strategic mentoring. 8+ years of experience, 100+ successful projects.">
     <meta property="og:type" content="website">
@@ -24,12 +25,12 @@
     <meta property="og:image" content="assets/images/hero1.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="StepUp Digital">
+    <meta property="og:site_name" content="MindOra">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="StepUp Digital - Professional Digital Services">
+    <meta name="twitter:title" content="MindOra - Professional Digital Services">
     <meta name="twitter:description"
         content="Expert web development, training programs, and digital transformation services">
     <meta name="twitter:image" content="assets/images/hero1.jpg">
@@ -38,8 +39,8 @@
     <link rel="preload" href="assets/images/hero1.jpg" as="image">
     <link rel="preload" href="js/vendor/gsap.min.js" as="script">
     <link rel="preload" href="css/local-fonts.css" as="style">
-    <link rel="preload" href="assets/fonts/montserrat-v25-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/unbounded-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/manrope-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/local-fonts.css">
@@ -52,16 +53,15 @@
     <!-- JavaScript Libraries -->
     <script src="js/vendor/gsap.min.js"></script>
     <script src="js/vendor/ScrollTrigger.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="js/emailjs-config.js"></script>
+    <script src="js/contact-form.js"></script>
 </head>
 
-<body>
+<body data-page="home">
     <!-- Loading Indicator -->
     <div class="loading" aria-hidden="true"></div>
 
     <!-- Skip Navigation -->
-    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <a href="#main-content" class="skip-nav">Үндсэн хэсэг рүү очих</a>
 
     <!-- Navigation Header -->
     <header class="main-menu" role="banner">
@@ -90,8 +90,20 @@
 
             <!-- Logo -->
             <div class="logo-container">
-                <a href="index.html" class="logo-link" aria-label="StepUp Digital - Go to homepage">
-                    <img src="assets/images/logo.jpg" alt="StepUp Digital Logo" class="logo-image">
+                <a href="index.html" class="logo-link" aria-label="MindOra - Go to homepage">
+                    <svg class="logo-image" viewBox="0 0 160 160" role="img" aria-label="MindOra logo"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" stroke-width="9">
+                            <circle cx="80" cy="80" r="20" stroke="#3ED0C4" stroke-dasharray="90 35"
+                                transform="rotate(-90 80 80)" />
+                            <circle cx="80" cy="80" r="35" stroke="#ffffff" stroke-dasharray="158 62"
+                                transform="rotate(-50 80 80)" />
+                            <circle cx="80" cy="80" r="50" stroke="#3ED0C4" stroke-dasharray="226 88"
+                                transform="rotate(-10 80 80)" />
+                            <circle cx="80" cy="80" r="65" stroke="#ffffff" stroke-dasharray="294 114"
+                                transform="rotate(30 80 80)" />
+                        </g>
+                    </svg>
                 </a>
             </div>
 
@@ -99,20 +111,20 @@
             <div class="nav-links nav-links-right">
                 <a href="#about" class="button js-button" aria-label="Go to About section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">About</span>
-                        <span class="button__hover js-button__hover">About</span>
+                        <span class="button__text js-button__text">Тухай</span>
+                        <span class="button__hover js-button__hover">Тухай</span>
                     </span>
                 </a>
                 <a href="#services" class="button js-button" aria-label="Go to Services section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Services</span>
-                        <span class="button__hover js-button__hover">Services</span>
+                        <span class="button__text js-button__text">Үйлчилгээ</span>
+                        <span class="button__hover js-button__hover">Үйлчилгээ</span>
                     </span>
                 </a>
                 <a href="#contact" class="button js-button" aria-label="Go to Contact section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Contact</span>
-                        <span class="button__hover js-button__hover">Contact</span>
+                        <span class="button__text js-button__text">Холбоо барих</span>
+                        <span class="button__hover js-button__hover">Холбоо барих</span>
                     </span>
                 </a>
             </div>
@@ -145,20 +157,20 @@
                 <!-- Section Links -->
                 <a href="#about" class="button js-button" aria-label="Go to About section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">About</span>
-                        <span class="button__hover js-button__hover">About</span>
+                        <span class="button__text js-button__text">Тухай</span>
+                        <span class="button__hover js-button__hover">Тухай</span>
                     </span>
                 </a>
                 <a href="#services" class="button js-button" aria-label="Go to Services section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Services</span>
-                        <span class="button__hover js-button__hover">Services</span>
+                        <span class="button__text js-button__text">Үйлчилгээ</span>
+                        <span class="button__hover js-button__hover">Үйлчилгээ</span>
                     </span>
                 </a>
                 <a href="#contact" class="button js-button" aria-label="Go to Contact section">
                     <span class="button__inner">
-                        <span class="button__text js-button__text">Contact</span>
-                        <span class="button__hover js-button__hover">Contact</span>
+                        <span class="button__text js-button__text">Холбоо барих</span>
+                        <span class="button__hover js-button__hover">Холбоо барих</span>
                     </span>
                 </a>
             </div>
@@ -179,91 +191,7 @@
             <!-- Hero Section -->
             <section id="hero" class="hero-slider full-screen section" role="banner" aria-labelledby="hero-title">
                 <div class="slider-container" role="region" aria-label="Hero image carousel" aria-live="polite">
-                    <div class="slide active" data-index="0" role="group" aria-label="Digital Innovation slide">
-                        <div class="slide-content">
-                            <h1 id="hero-title">Welcome to Digital Innovation</h1>
-                            <p>Transforming ideas into digital reality with cutting-edge technology and expert guidance
-                            </p>
-                            <div class="hero-cta">
-                                <div class="button-wrap">
-                                    <button onclick="window.location.href='#services'" type="button"
-                                        aria-describedby="hero-title">
-                                        <span>Explore Services</span>
-                                    </button>
-                                    <div class="button-shadow" aria-hidden="true"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-bg">
-                            <img src="assets/images/cow-7200409-copy.jpg" data-src="assets/images/cow-7200409-copy.jpg"
-                                alt="Modern digital workspace showing innovative technology solutions"
-                                class="lazy-load slide-bg-img" loading="eager">
-                        </div>
-                    </div>
-
-                    <div class="slide" data-index="1" role="group" aria-label="Professional Training slide">
-                        <div class="slide-content">
-                            <h1>Professional Training Programs</h1>
-                            <p>Expert-led courses in web development, data science, and emerging technologies</p>
-                            <div class="hero-cta">
-                                <div class="button-wrap">
-                                    <button onclick="window.location.href='surgalt.html'" type="button"
-                                        aria-label="View training courses">
-                                        <span>View Courses</span>
-                                    </button>
-                                    <div class="button-shadow" aria-hidden="true"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-bg">
-                            <img src="assets/images/hero1.jpg" data-src="assets/images/hero1.jpg"
-                                alt="Professional training session with students learning modern technology skills"
-                                class="lazy-load slide-bg-img" loading="lazy">
-                        </div>
-                    </div>
-
-                    <div class="slide" data-index="2" role="group" aria-label="Digital Transformation slide">
-                        <div class="slide-content">
-                            <h1>Digital Transformation Services</h1>
-                            <p>Modernize your business operations with cutting-edge technology solutions and strategic
-                                guidance</p>
-                            <div class="hero-cta">
-                                <div class="button-wrap">
-                                    <button onclick="window.location.href='TD.html'" type="button"
-                                        aria-label="Learn about digital transformation">
-                                        <span>Learn More</span>
-                                    </button>
-                                    <div class="button-shadow" aria-hidden="true"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-bg">
-                            <img src="assets/images/hero2.jpg" data-src="assets/images/hero2.jpg"
-                                alt="Digital transformation dashboard showing modern business analytics and cloud solutions"
-                                class="lazy-load slide-bg-img" loading="lazy">
-                        </div>
-                    </div>
-
-                    <div class="slide" data-index="3" role="group" aria-label="Mentorship & Coaching slide">
-                        <div class="slide-content">
-                            <h1>Expert Mentorship & Coaching</h1>
-                            <p>Personalized guidance and career coaching to accelerate your professional development</p>
-                            <div class="hero-cta">
-                                <div class="button-wrap">
-                                    <button onclick="window.location.href='zuwluguu.html'" type="button"
-                                        aria-label="Start mentorship program">
-                                        <span>Get Started</span>
-                                    </button>
-                                    <div class="button-shadow" aria-hidden="true"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-bg">
-                            <img src="assets/images/hero3.jpg" data-src="assets/images/hero3.jpg"
-                                alt="One-on-one mentoring session with professional coach providing career guidance"
-                                class="lazy-load slide-bg-img" loading="lazy">
-                        </div>
-                    </div>
+                    <!-- Slides populated dynamically by js/content-loader.js from MongoDB -->
 
                     <!-- Slider Navigation -->
                     <div class="slider-nav-area prev-area">
@@ -283,36 +211,13 @@
                         </button>
                     </div>
 
-                    <!-- Slide Indicators -->
-                    <div class="slide-indicators" role="group" aria-label="Slide navigation">
-                        <button class="indicator active" data-index="0" aria-label="Go to slide 1: Digital Innovation"
-                            type="button"></button>
-                        <button class="indicator" data-index="1" aria-label="Go to slide 2: Professional Training"
-                            type="button"></button>
-                        <button class="indicator" data-index="2" aria-label="Go to slide 3: Digital Transformation"
-                            type="button"></button>
-                        <button class="indicator" data-index="3" aria-label="Go to slide 4: Mentorship & Coaching"
-                            type="button"></button>
-                    </div>
+                    <!-- Slide Indicators (populated dynamically by js/content-loader.js) -->
+                    <div class="slide-indicators" role="group" aria-label="Slide navigation"></div>
                 </div>
 
-                <!-- Wave Transition -->
-                <div class="wave-transition" aria-hidden="true">
-                    <div class="wave-container">
-                        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto" role="presentation">
-                            <defs>
-                                <path id="gentle-wave"
-                                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                            </defs>
-                            <g class="parallax">
-                                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(18,113,255,0.6)" />
-                                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(108,0,162,0.7)" />
-                                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,17,82,0.8)" />
-                                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(0,17,82)" />
-                            </g>
-                        </svg>
-                    </div>
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator" aria-hidden="true">
+                    <div class="mouse"></div>
                 </div>
             </section>
 
@@ -340,21 +245,23 @@
                 </div>
 
                 <div class="about-section-2-content">
-                    <h2 id="about-title">About Me</h2>
+                    <h2 id="about-title">MindOra-ийн тухай</h2>
+                    <p class="about-intro">MindOra нь дижитал бүтээгдэхүүн, мэргэжлийн сургалт, хувь хүний зөвлөгөө
+                        гурвыг нэг дор нэгтгэсэн платформ — өсөж хөгжих гурван арга зам, ганцхан баг.</p>
 
-                    <div class="about-cards-container" role="region" aria-label="Professional background information">
+                    <div class="about-cards-container" role="region" aria-label="MindOra юу санал болгодог">
                         <article class="glass-card" data-card="experience" tabindex="0" role="article"
                             aria-labelledby="exp-title">
                             <div class="glass-card-inner">
                                 <div class="card-icon" aria-hidden="true">🚀</div>
-                                <h3 id="exp-title">Experience & Expertise</h3>
-                                <p>With over 8 years in digital transformation, I've helped countless businesses evolve
-                                    their technology stack and operational processes. My expertise spans from full-stack
-                                    development to strategic digital consulting.</p>
+                                <h3 id="exp-title">Бидний хийдэг зүйл</h3>
+                                <p>TD-н сонгомол бүтээгдэхүүнээс эхлээд Surgalt-ын гэрчилгээтэй сургалт, Zuwluguu-ийн
+                                    хувийн зөвлөгөө хүртэл — MindOra хүмүүс болон байгууллагуудад дижитал эрин үед
+                                    бодит, практик ур чадвар эзэмшихэд туслана.</p>
                                 <div class="card-highlights">
-                                    <span class="highlight">8+ Years Experience</span>
-                                    <span class="highlight">100+ Projects</span>
-                                    <span class="highlight">50+ Clients</span>
+                                    <span class="highlight">Бүтээгдэхүүн</span>
+                                    <span class="highlight">Сургалт</span>
+                                    <span class="highlight">Зөвлөгөө</span>
                                 </div>
                             </div>
                         </article>
@@ -363,95 +270,35 @@
                             aria-labelledby="phil-title">
                             <div class="glass-card-inner">
                                 <div class="card-icon" aria-hidden="true">💡</div>
-                                <h3 id="phil-title">Philosophy & Approach</h3>
-                                <p>I believe in creating technology that serves people, not the other way around. My
-                                    approach combines cutting-edge technical skills with human-centered design thinking
-                                    to deliver solutions that truly make a difference.</p>
+                                <h3 id="phil-title">Бидний хандлага</h3>
+                                <p>Бид хүмүүст үйлчилдэг технологид итгэдэг. Бидний хичээл, бүтээгдэхүүн, зөвлөгөө
+                                    тус бүр онолоос илүү бодит үр дүн, гарын дадлагад тулгуурладаг.</p>
                                 <div class="card-highlights">
-                                    <span class="highlight">User-Centered</span>
-                                    <span class="highlight">Innovation-Driven</span>
-                                    <span class="highlight">Results-Focused</span>
+                                    <span class="highlight">Гарын Дадлага</span>
+                                    <span class="highlight">Практик</span>
+                                    <span class="highlight">Үр Дүнд Чиглэсэн</span>
                                 </div>
                             </div>
                         </article>
                     </div>
-                </div>
 
-                <!-- Professional Certifications -->
-                <div class="certificates-section" role="region" aria-labelledby="certs-title">
-                    <h3 id="certs-title" class="certificates-title">Professional Certifications & Achievements</h3>
-                    <div class="certificates-grid" role="list">
-                        <div class="certificate-item" data-cert="AWS Certified" role="listitem" tabindex="0"
-                            aria-label="AWS Cloud Architecture Certification">
-                            <div class="cert-logo">
-                                <img src="assets/images/aws-logo.svg" alt="AWS Certified Solutions Architect logo"
-                                    class="cert-image" loading="lazy">
-                            </div>
+                    <!-- Жишээ тоо баримт - MindOra-ийн бодит тоог оруулна уу -->
+                    <div class="stats-bar" role="list" aria-label="MindOra тоогоор">
+                        <div class="stat-item" role="listitem">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Жил Ажилласан</span>
                         </div>
-
-                        <div class="certificate-item" data-cert="Google Cloud" role="listitem" tabindex="0"
-                            aria-label="Google Cloud Platform Certification">
-                            <div class="cert-logo">
-                                <img src="assets/images/gcp-logo.svg"
-                                    alt="Google Cloud Professional Cloud Architect logo" class="cert-image"
-                                    loading="lazy">
-                            </div>
+                        <div class="stat-item" role="listitem">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Сурагч Бэлтгэсэн</span>
                         </div>
-
-                        <div class="certificate-item" data-cert="Microsoft Azure" role="listitem" tabindex="0"
-                            aria-label="Microsoft Azure Solutions Expert Certification">
-                            <div class="cert-logo">
-                                <img src="assets/images/azure-logo.svg"
-                                    alt="Microsoft Azure Solutions Architect Expert logo" class="cert-image"
-                                    loading="lazy">
-                            </div>
+                        <div class="stat-item" role="listitem">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Төсөл Хэрэгжүүлсэн</span>
                         </div>
-
-                        <div class="certificate-item" data-cert="React Certified" role="listitem" tabindex="0"
-                            aria-label="React Development Certification">
-                            <div class="cert-logo">
-                                <img src="assets/images/react-logo.svg"
-                                    alt="React Professional Developer Certification logo" class="cert-image"
-                                    loading="lazy">
-                            </div>
-                        </div>
-
-                        <div class="certificate-item" data-cert="Digital Marketing" role="listitem" tabindex="0"
-                            aria-label="Digital Marketing Strategy Certification">
-                            <div class="cert-logo">
-                                <img src="assets/images/marketing-logo.svg"
-                                    alt="Google Digital Marketing & E-commerce Certification logo" class="cert-image"
-                                    loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Poetic Statement Section -->
-                <div class="poetic-section">
-                    <div class="poetic-container">
-                        <div class="poetic-content">
-                            <div class="poetic-quote">
-                                <span class="quote-mark">"</span>
-                                <p class="poetic-text">
-                                    In the symphony of code and creativity,<br>
-                                    where logic meets imagination,<br>
-                                    I craft digital dreams into reality—<br>
-                                    <em>one pixel, one line, one vision at a time.</em>
-                                </p>
-                                <span class="quote-mark closing">"</span>
-                            </div>
-                            <div class="poetic-author">
-                                <span class="author-line"></span>
-                                <span class="author-name">Digital Artisan</span>
-                            </div>
-                        </div>
-                        <div class="poetic-background">
-                            <div class="floating-elements">
-                                <div class="element element-1"></div>
-                                <div class="element element-2"></div>
-                                <div class="element element-3"></div>
-                            </div>
+                        <div class="stat-item" role="listitem">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Хамтрагч Байгууллага</span>
                         </div>
                     </div>
                 </div>
@@ -459,28 +306,12 @@
 
             <!-- Services Section -->
             <section id="services" class="full-screen section" aria-labelledby="services-title">
-                <!-- Animated Background -->
-                <div class="animated-circles-area" aria-hidden="true">
-                    <ul class="circles">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-
                 <div class="services-header">
-                    <h2 id="services-title">Our Professional Services</h2>
-                    <p class="services-subtitle">Comprehensive digital solutions tailored to accelerate your success in
-                        the modern digital landscape</p>
+                    <h2 id="services-title">Бидний Мэргэжлийн Үйлчилгээ</h2>
+                    <p class="services-subtitle">Орчин үеийн дижитал ертөнцөд амжилтад хүрэхэд зориулсан цогц дижитал
+                        шийдлүүд</p>
                 </div>
-                <div class="services-grid" role="region" aria-label="Available services">
+                <div class="services-grid" role="region" aria-label="Боломжтой үйлчилгээнүүд">
                     <!-- Training Programs -->
                     <article class="service-card" data-service="surgalt" tabindex="0" role="article"
                         aria-labelledby="surgalt-title">
@@ -490,19 +321,18 @@
                                 loading="lazy">
                         </div>
                         <div class="service-content">
-                            <h3 id="surgalt-title">Surgalt Training Programs</h3>
+                            <h3 id="surgalt-title">Surgalt Сургалтын Хөтөлбөр</h3>
                             <p class="service-description">
-                                Comprehensive professional training programs in web development, data science, and
-                                emerging technologies.
-                                Build practical skills through hands-on projects and expert mentorship.
+                                Веб хөгжүүлэлт, дата шинжлэх ухаан болон шинэ технологийн чиглэлээр цогц мэргэжлийн
+                                сургалт. Гарын дадлага, туршлагатай зөвлөхүүдээр дамжуулан бодит ур чадвар эзэмшинэ.
                             </p>
-                            <div class="service-features" role="list" aria-label="Service features">
-                                <span class="feature-tag" role="listitem">Professional Training</span>
-                                <span class="feature-tag" role="listitem">Industry Certifications</span>
-                                <span class="feature-tag" role="listitem">Expert Mentorship</span>
+                            <div class="service-features" role="list" aria-label="Үйлчилгээний онцлог">
+                                <span class="feature-tag" role="listitem">Мэргэжлийн Сургалт</span>
+                                <span class="feature-tag" role="listitem">Салбарын Гэрчилгээ</span>
+                                <span class="feature-tag" role="listitem">Туршлагатай Зөвлөгөө</span>
                             </div>
                             <a href="surgalt.html" class="service-link" aria-describedby="surgalt-title">
-                                <span>Explore Training Programs</span>
+                                <span>Сургалтын Хөтөлбөр Үзэх</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" aria-hidden="true">
                                     <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -520,18 +350,18 @@
                                 loading="lazy">
                         </div>
                         <div class="service-content">
-                            <h3 id="zuwluguu-title">Zuwluguu Mentorship & Coaching</h3>
+                            <h3 id="zuwluguu-title">Zuwluguu Зөвлөгөө & Дэмжлэг</h3>
                             <p class="service-description">
-                                Personalized mentorship and strategic career coaching services. Get expert guidance
-                                to accelerate your professional growth and navigate complex career decisions.
+                                Хувь хүнд тохирсон зөвлөгөө, стратегийн ажил мэргэжлийн дэмжлэг. Мэргэжлийн өсөлтөө
+                                хурдасгаж, төвөгтэй шийдвэрүүдийг гаргахад туслах туршлагатай зөвлөгөө авна.
                             </p>
-                            <div class="service-features" role="list" aria-label="Service features">
-                                <span class="feature-tag" role="listitem">Career Coaching</span>
-                                <span class="feature-tag" role="listitem">Strategic Planning</span>
-                                <span class="feature-tag" role="listitem">Personal Advisory</span>
+                            <div class="service-features" role="list" aria-label="Үйлчилгээний онцлог">
+                                <span class="feature-tag" role="listitem">Ажил Мэргэжлийн Зөвлөгөө</span>
+                                <span class="feature-tag" role="listitem">Стратеги Төлөвлөлт</span>
+                                <span class="feature-tag" role="listitem">Хувийн Дэмжлэг</span>
                             </div>
                             <a href="zuwluguu.html" class="service-link" aria-describedby="zuwluguu-title">
-                                <span>Explore Mentorship Services</span>
+                                <span>Зөвлөгөөний Үйлчилгээ Үзэх</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" aria-hidden="true">
                                     <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -549,20 +379,19 @@
                                 loading="lazy">
                         </div>
                         <div class="service-content">
-                            <h3 id="td-title">TD Digital Transformation</h3>
+                            <h3 id="td-title">TD Дижитал Шилжилт</h3>
                             <p class="service-description">
-                                Complete digital transformation solutions for businesses and organizations. Modernize
-                                your
-                                operations, technology infrastructure, and processes for competitive advantage in the
-                                digital era.
+                                Байгууллага, бизнест зориулсан цогц дижитал шилжилтийн шийдэл. Өрсөлдөх чадвараа
+                                нэмэгдүүлэхийн тулд үйл ажиллагаа, технологийн дэд бүтэц, процессоо
+                                орчин үеийн түвшинд хүргэнэ.
                             </p>
-                            <div class="service-features" role="list" aria-label="Service features">
-                                <span class="feature-tag" role="listitem">Digital Transformation</span>
-                                <span class="feature-tag" role="listitem">Technology Innovation</span>
-                                <span class="feature-tag" role="listitem">Process Modernization</span>
+                            <div class="service-features" role="list" aria-label="Үйлчилгээний онцлог">
+                                <span class="feature-tag" role="listitem">Дижитал Шилжилт</span>
+                                <span class="feature-tag" role="listitem">Технологийн Инноваци</span>
+                                <span class="feature-tag" role="listitem">Процессын Шинэчлэл</span>
                             </div>
                             <a href="TD.html" class="service-link" aria-describedby="td-title">
-                                <span>Explore Digital Solutions</span>
+                                <span>Дижитал Шийдэл Үзэх</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" aria-hidden="true">
                                     <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -573,9 +402,47 @@
                 </div>
             </section>
 
+            <!-- TD Showcase (rendered dynamically by js/content-loader.js) -->
+            <section id="showcase-td" class="showcase-section" aria-labelledby="showcase-td-title">
+                <div class="showcase-card">
+                    <div class="showcase-header">
+                        <h2 id="showcase-td-title">TD-н Бүтээгдэхүүн</h2>
+                        <p class="showcase-subtitle">Манай сонгомол бүтээгдэхүүний амтыг мэдрээрэй.</p>
+                        <a href="TD.html" class="showcase-link">Бүх бүтээгдэхүүнийг үзэх <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="showcase-grid" id="td-teaser-grid" role="list" aria-label="TD-н онцлох бүтээгдэхүүн"></div>
+                </div>
+            </section>
+
+            <!-- Surgalt Showcase (rendered dynamically by js/content-loader.js) -->
+            <section id="showcase-surgalt" class="showcase-section" aria-labelledby="showcase-surgalt-title">
+                <div class="showcase-card">
+                    <div class="showcase-header">
+                        <h2 id="showcase-surgalt-title">Surgalt Сургалт</h2>
+                        <p class="showcase-subtitle">Манай сургалтын хөтөлбөрийн амтыг мэдрээрэй.</p>
+                        <a href="surgalt.html" class="showcase-link">Бүх хичээлийг үзэх <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="showcase-grid" id="surgalt-teaser-grid" role="list"
+                        aria-label="Surgalt-ын онцлох хичээл"></div>
+                </div>
+            </section>
+
+            <!-- Zuwluguu Showcase (rendered dynamically by js/content-loader.js) -->
+            <section id="showcase-zuwluguu" class="showcase-section" aria-labelledby="showcase-zuwluguu-title">
+                <div class="showcase-card">
+                    <div class="showcase-header">
+                        <h2 id="showcase-zuwluguu-title">Zuwluguu Зөвлөгөө</h2>
+                        <p class="showcase-subtitle">Манай зөвлөгөөний амтыг мэдрээрэй.</p>
+                        <a href="zuwluguu.html" class="showcase-link">Бүх зөвлөгөөг үзэх <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="showcase-grid" id="zuwluguu-teaser-grid" role="list"
+                        aria-label="Zuwluguu-ийн онцлох зөвлөгөө"></div>
+                </div>
+            </section>
+
             <!-- Client Testimonials -->
             <section id="portfolio" class="full-screen section" aria-labelledby="testimonials-title">
-                <h2 id="testimonials-title">What Our Clients Say</h2>
+                <h2 id="testimonials-title">Үйлчлүүлэгчдийн Сэтгэгдэл</h2>
                 <div class="portfolio-container">
                     <div class="infinite-scroll-container" role="region" aria-label="Client testimonials carousel"
                         aria-live="polite">
@@ -589,12 +456,11 @@
                                         loading="lazy">
                                     <div class="client-info">
                                         <h4 id="client1-name">Л.Цогжавхлан</h4>
-                                        <span>Senior Web Developer</span>
+                                        <span>Ахлах Веб Хөгжүүлэгч</span>
                                     </div>
                                 </div>
-                                <p>"The training program exceeded my expectations. The hands-on approach and real-world
-                                    projects helped me grow significantly as a developer and advance my career to senior
-                                    level."</p>
+                                <p>"Сургалтын хөтөлбөр миний хүлээлтээс давсан. Гарын дадлага, бодит төслүүд надад
+                                    хөгжүүлэгчийн хувьд эрс өсөж, ахлах түвшинд шилжихэд маш их тусалсан."</p>
                             </div>
                         </article>
 
@@ -608,12 +474,12 @@
                                         loading="lazy">
                                     <div class="client-info">
                                         <h4 id="client2-name">Jane Smith</h4>
-                                        <span>Senior UX Designer</span>
+                                        <span>Ахлах UX Дизайнер</span>
                                     </div>
                                 </div>
-                                <p>"The mentorship program provided invaluable guidance and helped me transition into UX
-                                    design smoothly. The personalized coaching approach made all the difference in my
-                                    career development."</p>
+                                <p>"Зөвлөгөөний хөтөлбөр надад маш үнэтэй чиглүүлэг өгч, UX дизайн руу гөлгөр шилжихэд
+                                    тусалсан. Хувь хүнд тохирсон зөвлөгөөний хандлага миний карьерын хөгжилд гол үүрэг
+                                    гүйцэтгэсэн."</p>
                             </div>
                         </article>
 
@@ -627,12 +493,12 @@
                                         loading="lazy">
                                     <div class="client-info">
                                         <h4 id="client3-name">Mike Johnson</h4>
-                                        <span>Digital Marketing Director</span>
+                                        <span>Дижитал Маркетингийн Захирал</span>
                                     </div>
                                 </div>
-                                <p>"The digital transformation consultation helped our company modernize our processes
-                                    and improve efficiency by 40%. The strategic approach and technical expertise were
-                                    exceptional."</p>
+                                <p>"Дижитал шилжилтийн зөвлөгөө манай компанийн үйл ажиллагааг орчин үеийн болгож,
+                                    үр ашгийг 40%-иар нэмэгдүүлэхэд тусалсан. Стратегийн хандлага, техникийн мэдлэг
+                                    үнэхээр гайхалтай байлаа."</p>
                             </div>
                         </article>
 
@@ -646,13 +512,12 @@
                                         loading="lazy">
                                     <div class="client-info">
                                         <h4 id="client4-name">Sarah Wilson</h4>
-                                        <span>Senior Project Manager</span>
+                                        <span>Ахлах Төслийн Менежер</span>
                                     </div>
                                 </div>
-                                <p>"Outstanding service and attention to detail. The comprehensive digital strategy
-                                    delivered
-                                    beyond our expectations and helped us achieve our transformation goals ahead of
-                                    schedule."</p>
+                                <p>"Маш чанартай үйлчилгээ, нарийвчлалд анхаарсан ажил. Цогц дижитал стратеги
+                                    манай хүлээлтээс давж, шилжилтийн зорилгодоо төлөвлөснөөс эрт хүрэхэд
+                                    тусалсан."</p>
                             </div>
                         </article>
                     </div>
@@ -662,9 +527,8 @@
             <!-- Contact Section -->
             <section id="contact" class="full-screen section" aria-labelledby="contact-title">
                 <h2 id="contact-title">Холбоо барих</h2>
-                <p class="contact-tagline">Ready to start your digital transformation journey? <br> Let's connect and
-                    discuss
-                    how we can help you achieve your goals.</p>
+                <p class="contact-tagline">Дижитал шилжилтийн аяллаа эхлүүлэхэд бэлэн үү? <br> Бидэнтэй холбогдож,
+                    таны зорилгод хүрэхэд хэрхэн туслах талаар ярилцъя.</p>
                 <div class="contact-grid" role="region" aria-label="Contact information and form">
                     <!-- Contact Methods -->
                     <div class="contact-cards-container" role="group" aria-label="Contact methods">
@@ -672,7 +536,7 @@
                             aria-label="Send email to email@example.com">
                             <div class="contact-card-inner">
                                 <div class="contact-icon" aria-hidden="true">📧</div>
-                                <h3>Email</h3>
+                                <h3>Имэйл</h3>
                                 <div class="contact-info">
                                     <span class="contact-link">email@example.com</span>
                                 </div>
@@ -683,11 +547,11 @@
                             aria-label="Copy phone number +123 456 7890">
                             <div class="contact-card-inner">
                                 <div class="contact-icon" aria-hidden="true">📱</div>
-                                <h3>Phone</h3>
+                                <h3>Утас</h3>
                                 <div class="contact-info">
                                     <span class="contact-link">+123 456 7890</span>
                                 </div>
-                                <span class="copy-indicator">Click to copy</span>
+                                <span class="copy-indicator">Хуулахын тулд дарна уу</span>
                             </div>
                         </button>
 
@@ -716,44 +580,44 @@
 
                     <!-- Contact Form -->
                     <div class="contact-form-container" role="region" aria-labelledby="form-title">
-                        <h3 id="form-title">Send Me a Message</h3>
+                        <h3 id="form-title">Мессеж Илгээх</h3>
                         <form id="contact-form" class="contact-form" novalidate>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="name">Name *</label>
-                                    <input type="text" id="name" name="name" placeholder="Your name" required
+                                    <label for="name">Нэр *</label>
+                                    <input type="text" id="name" name="name" placeholder="Таны нэр" required
                                         aria-describedby="name-error">
                                     <span id="name-error" class="error-message" aria-live="polite"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="Your phone number"
+                                    <label for="phone">Утас</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Таны утасны дугаар"
                                         aria-describedby="phone-error">
                                     <span id="phone-error" class="error-message" aria-live="polite"></span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" placeholder="Your email address" required
+                                <label for="email">Имэйл *</label>
+                                <input type="email" id="email" name="email" placeholder="Таны имэйл хаяг" required
                                     aria-describedby="email-error">
                                 <span id="email-error" class="error-message" aria-live="polite"></span>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Subject of your message"
+                                <label for="subject">Гарчиг</label>
+                                <input type="text" id="subject" name="subject" placeholder="Таны мессежийн гарчиг"
                                     aria-describedby="subject-error">
                                 <span id="subject-error" class="error-message" aria-live="polite"></span>
                             </div>
                             <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" name="message" placeholder="Your message..." required rows="5"
+                                <label for="message">Мессеж *</label>
+                                <textarea id="message" name="message" placeholder="Таны мессеж..." required rows="5"
                                     aria-describedby="message-error"></textarea>
                                 <span id="message-error" class="error-message" aria-live="polite"></span>
                             </div>
                             <!-- Submit Button -->
                             <div class="button-wrap">
                                 <button type="submit" aria-describedby="submit-status">
-                                    <span>Send Message</span>
+                                    <span>Илгээх</span>
                                 </button>
                                 <div class="button-shadow" aria-hidden="true"></div>
                             </div>
@@ -777,7 +641,7 @@
     </main>
 
     <footer role="contentinfo">
-        <p>&copy; 2025 StepUp Digital - Professional Digital Services & Training</p>
+        <p>&copy; 2025 MindOra - Мэргэжлийн Дижитал Үйлчилгээ ба Сургалт</p>
     </footer>
 
     <!-- Structured Data for SEO -->
@@ -785,7 +649,7 @@
     {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "StepUp Digital",
+        "name": "MindOra",
         "jobTitle": "Digital Solutions Expert",
         "description": "Professional web developer and digital transformation specialist with 8+ years of experience",
         "url": "https://yoursite.com/",
@@ -850,6 +714,8 @@
 
     <!-- JavaScript -->
     <script src="js/shared.js"></script>
+    <script src="js/html-utils.js"></script>
+    <script src="js/content-loader.js"></script>
     <script type="module" src="src/main.js"></script>
     <script>
         window.addEventListener('load', () => {

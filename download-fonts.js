@@ -2,38 +2,16 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
+// Unbounded and Manrope are variable fonts - Google Fonts serves one file per
+// family covering the whole weight range (400-800), not a separate file per weight.
 const fontFiles = [
     {
-        url: 'https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXp-p7K4KLg.woff2',
-        dest: 'assets/fonts/montserrat-v25-latin-regular.woff2'
+        url: 'https://fonts.gstatic.com/s/unbounded/v12/Yq6W-LOTXCb04q32xlpwu8Zf.woff2',
+        dest: 'assets/fonts/unbounded-variable-latin.woff2'
     },
     {
-        url: 'https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXp-p7K4KLg.woff',
-        dest: 'assets/fonts/montserrat-v25-latin-regular.woff'
-    },
-    {
-        url: 'https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aXp-p7K4KLg.woff2',
-        dest: 'assets/fonts/montserrat-v25-latin-700.woff2'
-    },
-    {
-        url: 'https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w3aXp-p7K4KLg.woff',
-        dest: 'assets/fonts/montserrat-v25-latin-700.woff'
-    },
-    {
-        url: 'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2',
-        dest: 'assets/fonts/poppins-v20-latin-300.woff2'
-    },
-    {
-        url: 'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlEA.woff',
-        dest: 'assets/fonts/poppins-v20-latin-300.woff'
-    },
-    {
-        url: 'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2',
-        dest: 'assets/fonts/poppins-v20-latin-600.woff2'
-    },
-    {
-        url: 'https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlEA.woff',
-        dest: 'assets/fonts/poppins-v20-latin-600.woff'
+        url: 'https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2',
+        dest: 'assets/fonts/manrope-variable-latin.woff2'
     },
 ];
 
@@ -84,4 +62,4 @@ const ensureDirExists = (dirPath) => {
 ensureDirExists(path.join(__dirname, 'assets', 'fonts'));
 
 // Start downloading fonts
-downloadFonts(); 
+downloadFonts();

@@ -153,35 +153,12 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error('Error initializing hover buttons:', error);
     }
 
-    // Menu animations with performance optimization
+    // Menu entrance animation + permanent "active section" styling
+    // (per-link hover animation is handled by HoverBtn above, so it isn't duplicated here)
     try {
         const menuLinks = document.querySelectorAll('.main-menu nav a');
-        const menuAnimation = {
-            enter: {
-                scale: 1.1,
-                backgroundColor: "white",
-                color: "#000",
-                duration: 0.2,
-                ease: 'power2.out'
-            },
-            leave: {
-                scale: 1,
-                backgroundColor: "transparent",
-                color: "#fff",
-                duration: 0.2,
-                ease: 'power2.out'
-            },
-            activeSection: {
-                scale: 1,
-                backgroundColor: "#aaaaaa",
-                color: "#555555",
-                opacity: 0.8,
-                duration: 0,
-                ease: 'none'
-            }
-        };
 
-        // Add hover animation to each menu link
+        // Apply active-section styling for each menu link
         menuLinks.forEach(link => {
             // Apply active section styling immediately and permanently
             if (link.classList.contains('active-section')) {
@@ -207,10 +184,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Remove all event listeners by cloning and replacing
                 const newLink = link.cloneNode(true);
                 link.parentNode.replaceChild(newLink, link);
-            } else {
-                // Regular hover animations for non-active links
-                link.addEventListener('mouseenter', () => gsap.to(link, menuAnimation.enter));
-                link.addEventListener('mouseleave', () => gsap.to(link, menuAnimation.leave));
             }
         });
 

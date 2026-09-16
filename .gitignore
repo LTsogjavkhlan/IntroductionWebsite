@@ -20,6 +20,9 @@ yarn.lock
 dist/
 build/
 
+# Local database
+data/*.db
+
 # Logs
 logs/
 *.log

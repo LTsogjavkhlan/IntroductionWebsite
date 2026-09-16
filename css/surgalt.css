@@ -68,7 +68,7 @@ body {
 .hero-section {
     padding: 55px 5% 80px;
     min-height: 80vh;
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background: linear-gradient(135deg, #1E1A4D 0%, #3A34A0 50%, #1E1A4D 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,7 +88,7 @@ body {
 
 /* Main title */
 .hero-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -101,7 +101,7 @@ body {
 
 /* Hero description */
 .hero-description {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.9);
@@ -164,7 +164,7 @@ body {
 }
 
 .category-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 15px;
@@ -172,7 +172,7 @@ body {
 }
 
 .category-description {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 25px;
@@ -181,10 +181,10 @@ body {
 }
 
 .category-link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     display: inline-block;
     padding: 10px 20px;
-    background: linear-gradient(135deg, #7c4dff 0%, #8e2de2 100%);
+    background: linear-gradient(135deg, #3A34A0 0%, #069494 100%);
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -204,7 +204,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #8e2de2 0%, #7c4dff 100%);
+    background: linear-gradient(135deg, #069494 0%, #3A34A0 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: -1;
@@ -212,7 +212,7 @@ body {
 
 .category-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 7px 15px rgba(126, 87, 194, 0.4);
+    box-shadow: 0 7px 15px rgba(58, 52, 160, 0.4);
 }
 
 .category-link:hover:after {
@@ -285,10 +285,10 @@ body {
 }
 
 .section-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #0f0c29;
+    color: #1E1A4D;
     text-align: center;
     margin-bottom: 15px;
     opacity: 0;
@@ -296,7 +296,7 @@ body {
 }
 
 .section-description {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 1.1rem;
     color: #555;
     text-align: center;
@@ -308,40 +308,6 @@ body {
 
 .courses-section.collapsed .section-description {
     margin: 0 auto 20px;
-}
-
-/* Category Tabs */
-.category-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    opacity: 0;
-}
-
-.tab-button {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    padding: 10px 25px;
-    border-radius: 30px;
-    border: none;
-    background-color: #e5e5e5;
-    color: #444;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    outline: none;
-}
-
-.tab-button.active {
-    background: linear-gradient(135deg, #7c4dff 0%, #8e2de2 100%);
-    color: white;
-    box-shadow: 0 5px 15px rgba(126, 87, 194, 0.3);
-}
-
-.tab-button:hover:not(.active) {
-    background-color: #d5d5d5;
-    transform: translateY(-2px);
 }
 
 /* Course Cards Container */
@@ -362,7 +328,7 @@ body {
     left: 0;
     width: 100%;
     height: 60px;
-    background: linear-gradient(to bottom, rgba(249, 249, 249, 0) 0%, rgba(249, 249, 249, 0.8) 50%, rgba(249, 249, 249, 1) 100%);
+    background: linear-gradient(to bottom, rgba(246, 245, 241, 0) 0%, rgba(246, 245, 241, 0.8) 50%, rgba(246, 245, 241, 1) 100%);
     pointer-events: none;
     z-index: 5;
     transition: opacity 0.5s ease;
@@ -427,7 +393,7 @@ body {
     padding: 5px 15px;
     background-color: #ff6b6b;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     border-radius: 20px;
@@ -451,17 +417,13 @@ body {
 }
 
 .course-category {
-    font-family: 'Poppins', sans-serif;
-    color: #7c4dff;
+    font-family: 'Manrope', sans-serif;
+    color: #3A34A0;
     font-weight: 600;
 }
 
-.course-rating {
-    color: #ffbb00;
-}
-
 .course-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 15px;
@@ -471,11 +433,11 @@ body {
 }
 
 .course-card:hover .course-title {
-    color: #7c4dff;
+    color: #3A34A0;
 }
 
 .course-description {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 20px;
@@ -483,10 +445,10 @@ body {
 }
 
 .course-link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #7c4dff;
+    color: #3A34A0;
     text-decoration: none;
     display: inline-block;
     padding-bottom: 3px;
@@ -495,7 +457,7 @@ body {
 }
 
 .course-link:hover {
-    border-bottom-color: #7c4dff;
+    border-bottom-color: #3A34A0;
 }
 
 /* Responsive Styles for Courses Section */
@@ -524,15 +486,6 @@ body {
         margin-bottom: 40px;
     }
 
-    .category-tabs {
-        flex-wrap: wrap;
-    }
-
-    .tab-button {
-        font-size: 0.9rem;
-        padding: 8px 20px;
-    }
-
     .course-cards-container {
         grid-template-columns: 1fr;
         max-width: 400px;
@@ -543,11 +496,6 @@ body {
 @media (max-width: 480px) {
     .section-title {
         font-size: 1.8rem;
-    }
-
-    .tab-button {
-        font-size: 0.8rem;
-        padding: 8px 15px;
     }
 }
 
@@ -560,12 +508,12 @@ body {
 }
 
 .view-all-btn {
-    background: linear-gradient(135deg, #7c4dff 0%, #8e2de2 100%);
+    background: linear-gradient(135deg, #3A34A0 0%, #069494 100%);
     color: white;
     border: none;
     border-radius: 30px;
     padding: 8px 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
@@ -575,7 +523,7 @@ body {
 }
 
 .view-all-btn:hover {
-    box-shadow: 0 5px 15px rgba(126, 87, 194, 0.3);
+    box-shadow: 0 5px 15px rgba(58, 52, 160, 0.3);
     transform: translateY(-2px);
 }
 
@@ -616,27 +564,27 @@ body {
 }
 
 .courses-section-blue .view-all-btn {
-    background: linear-gradient(135deg, #4776E6 0%, #8E54E9 100%);
+    background: linear-gradient(135deg, #3A34A0 0%, #069494 100%);
 }
 
 .courses-section-blue .view-all-btn:hover {
-    box-shadow: 0 5px 15px rgba(71, 118, 230, 0.3);
+    box-shadow: 0 5px 15px rgba(58, 52, 160, 0.3);
 }
 
 .courses-section-blue .course-link {
-    color: #4776E6;
+    color: #3A34A0;
 }
 
 .courses-section-blue .course-link:hover {
-    border-bottom-color: #4776E6;
+    border-bottom-color: #3A34A0;
 }
 
 .courses-section-blue .course-card:hover .course-title {
-    color: #4776E6;
+    color: #3A34A0;
 }
 
 .courses-section-blue.collapsed .course-cards-container::after {
-    background: linear-gradient(to bottom, rgba(240, 245, 255, 0) 0%, rgba(240, 245, 255, 0.8) 50%, rgba(240, 245, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(237, 236, 249, 0) 0%, rgba(237, 236, 249, 0.8) 50%, rgba(237, 236, 249, 1) 100%);
 }
 
 /* Green Course Section */
@@ -645,27 +593,27 @@ body {
 }
 
 .courses-section-green .view-all-btn {
-    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    background: linear-gradient(135deg, #069494 0%, #3ED0C4 100%);
 }
 
 .courses-section-green .view-all-btn:hover {
-    box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+    box-shadow: 0 5px 15px rgba(6, 148, 148, 0.3);
 }
 
 .courses-section-green .course-link {
-    color: #11998e;
+    color: #069494;
 }
 
 .courses-section-green .course-link:hover {
-    border-bottom-color: #11998e;
+    border-bottom-color: #069494;
 }
 
 .courses-section-green .course-card:hover .course-title {
-    color: #11998e;
+    color: #069494;
 }
 
 .courses-section-green.collapsed .course-cards-container::after {
-    background: linear-gradient(to bottom, rgba(240, 255, 245, 0) 0%, rgba(240, 255, 245, 0.8) 50%, rgba(240, 255, 245, 1) 100%);
+    background: linear-gradient(to bottom, rgba(232, 249, 247, 0) 0%, rgba(232, 249, 247, 0.8) 50%, rgba(232, 249, 247, 1) 100%);
 }
 
 /* Remove space between course sections */
